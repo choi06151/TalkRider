@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "region": "COMMON",
+  "category": "ESTIMATE",
+  "questions": [
+    {
+      "id": "CMN-EST-001",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "ALL",
+      "text": "경부고속도로는 처음부터 끝까지 몇 km일까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 416,
+        "unit": "km",
+        "tolerancePct": 10,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "서울에서 부산까지 이어져요.",
+        "400이 넘어요."
+      ],
+      "followUps": [
+        "지금까지 가장 길게 달려본 길은 몇 km쯤이었나요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-002",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "ALL",
+      "text": "서울에서 부산까지 직선거리는 몇 km쯤일까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 325,
+        "unit": "km",
+        "tolerancePct": 10,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "도로 거리보다 짧아요."
+      ],
+      "followUps": [
+        "길로 가면 얼마나 더 걸릴까요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-003",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "ALL",
+      "text": "지구에서 달까지 평균 거리는 몇 km쯤일까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 384400,
+        "unit": "km",
+        "tolerancePct": 15,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "만 단위가 아니라 더 커요.",
+        "38만 km 근처예요."
+      ],
+      "followUps": [
+        "달까지 차로 간다면 며칠이 걸릴까요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-004",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "ALL",
+      "text": "승용차 타이어가 한 바퀴 굴러가면 몇 cm를 갈까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 200,
+        "unit": "cm",
+        "tolerancePct": 15,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "2미터 안팎이에요."
+      ],
+      "followUps": [
+        "타이어가 몇 바퀴 돌면 1km일까요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-005",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "KID",
+      "text": "무지개는 몇 가지 색일까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 7,
+        "unit": "가지",
+        "tolerancePct": 15,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "빨주노초 다음이 있어요."
+      ],
+      "followUps": [
+        "무지개를 마지막으로 본 건 언제였나요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-006",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "KID",
+      "text": "일 년은 며칠일까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 365,
+        "unit": "일",
+        "tolerancePct": 3,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "삼백 몇십 일이에요."
+      ],
+      "followUps": [
+        "가장 기다려지는 날은 언제예요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-EST-007",
+      "category": "ESTIMATE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "KID",
+      "text": "우리 몸에는 뼈가 몇 개쯤 있을까요?",
+      "answerType": "NUMBER",
+      "ages": [
+        "ELEM",
+        "TEEN"
+      ],
+      "answer": {
+        "value": 206,
+        "unit": "개",
+        "tolerancePct": 15,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "백 개보다는 많아요.",
+        "이백 개 근처예요."
+      ],
+      "followUps": [
+        "제일 큰 뼈는 어디에 있을까요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "샘플 · 출처 확인 전",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    }
+  ]
+}

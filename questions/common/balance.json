@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "region": "COMMON",
+  "category": "BALANCE",
+  "questions": [
+    {
+      "id": "CMN-BAL-001",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "여행 가서 하루 종일 맛집 줄서기, 아니면 아무 계획 없이 숙소에서 쉬기?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "맛집 줄서기"
+        },
+        {
+          "id": "B",
+          "label": "숙소에서 쉬기"
+        }
+      ],
+      "followUps": [
+        "각자 이유를 한 가지씩 말해볼까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-002",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "평생 여름만 살기, 평생 겨울만 살기. 하나만 골라보세요.",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "평생 여름"
+        },
+        {
+          "id": "B",
+          "label": "평생 겨울"
+        }
+      ],
+      "followUps": [
+        "이유가 가장 달랐던 사람은 누구인가요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-003",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "휴게소에서 딱 하나만 먹을 수 있다면, 호두과자와 우동 중 무엇인가요?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "호두과자"
+        },
+        {
+          "id": "B",
+          "label": "우동"
+        }
+      ],
+      "followUps": [
+        "내가 꼭 사는 휴게소 음식도 말해볼까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-004",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "운전 중 가장 듣기 싫은 건 뭘까요? 같은 노래 반복, 아니면 끝없는 광고?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "같은 노래 반복"
+        },
+        {
+          "id": "B",
+          "label": "끝없는 광고"
+        }
+      ],
+      "followUps": [
+        "가장 오래 들은 노래는 뭐였나요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-005",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "평생 라면만 먹기, 평생 치킨만 먹기. 하나만 고른다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "라면"
+        },
+        {
+          "id": "B",
+          "label": "치킨"
+        }
+      ],
+      "followUps": [
+        "곁들일 음식 하나만 허락된다면요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-006",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "순간이동 능력과 투명인간 능력 중 하나를 가질 수 있다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "순간이동"
+        },
+        {
+          "id": "B",
+          "label": "투명인간"
+        }
+      ],
+      "followUps": [
+        "그 능력으로 제일 먼저 뭘 해볼까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-007",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "주말 하루를 선물받는다면, 늦잠 푹 자기와 새벽 일출 보러 가기 중에는?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "늦잠 푹 자기"
+        },
+        {
+          "id": "B",
+          "label": "일출 보러 가기"
+        }
+      ],
+      "followUps": [
+        "가장 좋았던 일출이나 늦잠의 기억이 있나요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-008",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "KID",
+      "text": "강아지 친구와 고양이 친구 중 하나만 키울 수 있다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "강아지"
+        },
+        {
+          "id": "B",
+          "label": "고양이"
+        }
+      ],
+      "followUps": [
+        "그 친구 이름은 뭐라고 지어줄까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-009",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "KID",
+      "text": "하루 종일 아이스크림만 먹기, 하루 종일 과자만 먹기. 하나만 고른다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "아이스크림"
+        },
+        {
+          "id": "B",
+          "label": "과자"
+        }
+      ],
+      "followUps": [
+        "어떤 맛을 제일 먼저 먹을까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-010",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "KID",
+      "text": "하늘을 나는 자동차와 바다를 달리는 자동차 중 하나를 탈 수 있다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "하늘 자동차"
+        },
+        {
+          "id": "B",
+          "label": "바다 자동차"
+        }
+      ],
+      "followUps": [
+        "제일 먼저 어디로 가볼까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-011",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "KID",
+      "text": "말하는 로봇 친구와 말하는 공룡 친구 중 누구랑 여행 갈래요?",
+      "answerType": "CHOICE",
+      "ages": [
+        "PRE",
+        "ELEM"
+      ],
+      "choices": [
+        {
+          "id": "A",
+          "label": "로봇 친구"
+        },
+        {
+          "id": "B",
+          "label": "공룡 친구"
+        }
+      ],
+      "followUps": [
+        "그 친구와 함께 뭘 하고 놀까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-012",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "KID",
+      "text": "휴게소에서 소떡소떡과 핫도그 중 하나만 먹는다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "소떡소떡"
+        },
+        {
+          "id": "B",
+          "label": "핫도그"
+        }
+      ],
+      "followUps": [
+        "소스는 뭘 뿌려 먹을까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-013",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "FRIENDS",
+      "text": "친구들과 여행 갈 때, 비싸도 경치 좋은 숙소와 저렴하고 넓은 숙소 중에는?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "경치 좋은 숙소"
+        },
+        {
+          "id": "B",
+          "label": "저렴하고 넓은 숙소"
+        }
+      ],
+      "followUps": [
+        "지금까지 묵은 숙소 중에 최고는 어디였나요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-014",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "FRIENDS",
+      "text": "여행 경비를 똑같이 나누기, 쓴 만큼 정산하기. 어느 쪽이 맞을까요?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "똑같이 나누기"
+        },
+        {
+          "id": "B",
+          "label": "쓴 만큼 정산"
+        }
+      ],
+      "followUps": [
+        "정산하다가 생긴 에피소드가 있나요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-015",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ADULT",
+      "text": "유명 맛집에서 한 시간 기다리기, 바로 들어가는 무난한 집 가기. 어느 쪽인가요?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "한 시간 기다리기"
+        },
+        {
+          "id": "B",
+          "label": "바로 들어가기"
+        }
+      ],
+      "followUps": [
+        "가장 오래 기다려 먹어본 음식은 뭐였나요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    },
+    {
+      "id": "CMN-BAL-016",
+      "category": "BALANCE",
+      "region": "COMMON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "FRIENDS",
+      "text": "친구 여행에서 총무 맡기, 사진 담당 맡기. 하나만 해야 한다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "총무"
+        },
+        {
+          "id": "B",
+          "label": "사진 담당"
+        }
+      ],
+      "followUps": [
+        "우리 중에 제일 잘 어울리는 사람은 누굴까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    }
+  ]
+}

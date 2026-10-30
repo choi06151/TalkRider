@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "modes": [
+    {
+      "id": "MODE_01",
+      "number": 1,
+      "category": "BALANCE",
+      "name": "밸런스 게임",
+      "open": true,
+      "cue": "우리 선택은"
+    },
+    {
+      "id": "MODE_02",
+      "number": 2,
+      "category": "ESTIMATE",
+      "name": "숫자 맞히기",
+      "open": false,
+      "cue": "정답은"
+    },
+    {
+      "id": "MODE_03",
+      "number": 3,
+      "category": "DEBATE",
+      "name": "찬반 토론",
+      "open": true,
+      "cue": "우리 입장은"
+    },
+    {
+      "id": "MODE_04",
+      "number": 4,
+      "category": "MEMORY",
+      "name": "추억 이야기",
+      "open": true,
+      "cue": "기억에 남는 건",
+      "finale": true
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "region": "JEONJU",
+  "category": "BALANCE",
+  "questions": [
+    {
+      "id": "JEONJU-BAL-001",
+      "category": "BALANCE",
+      "region": "JEONJU",
+      "tags": [
+        "전주"
+      ],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "전주에서 비빔밥과 콩나물국밥 중 하나만 먹는다면?",
+      "answerType": "CHOICE",
+      "choices": [
+        {
+          "id": "A",
+          "label": "비빔밥"
+        },
+        {
+          "id": "B",
+          "label": "콩나물국밥"
+        }
+      ],
+      "followUps": [
+        "아침으로 먹기엔 어느 쪽이 좋을까요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    }
+  ]
+}

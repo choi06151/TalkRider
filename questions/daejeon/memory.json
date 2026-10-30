@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "region": "DAEJEON",
+  "category": "MEMORY",
+  "questions": [
+    {
+      "id": "DAEJEON-MEM-001",
+      "category": "MEMORY",
+      "region": "DAEJEON",
+      "tags": [],
+      "difficulty": 1,
+      "audience": "ALL",
+      "text": "대전에 얽힌 추억이 있나요? 대전 하면 가장 먼저 떠오르는 장면은요?",
+      "answerType": "OPEN",
+      "followUps": [
+        "누구와 함께 갔나요?",
+        "이번 방문에서 꼭 해보고 싶은 것은 무엇인가요?"
+      ],
+      "status": "PUBLISHED",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    }
+  ]
+}

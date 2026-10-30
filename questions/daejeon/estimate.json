@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "region": "DAEJEON",
+  "category": "ESTIMATE",
+  "questions": [
+    {
+      "id": "DAEJEON-EST-001",
+      "category": "ESTIMATE",
+      "region": "DAEJEON",
+      "tags": [],
+      "difficulty": 2,
+      "audience": "ALL",
+      "text": "성심당 소금빵은 하루에 몇 개쯤 팔릴까요?",
+      "answerType": "NUMBER",
+      "answer": {
+        "value": 1000,
+        "unit": "개",
+        "tolerancePct": 20,
+        "scoring": "WITHIN_TOLERANCE"
+      },
+      "hints": [
+        "평일과 주말이 달라요.",
+        "줄이 길 때가 많아요."
+      ],
+      "followUps": [
+        "각자 생각한 숫자와 이유를 말해볼까요?"
+      ],
+      "reveal": "실제 값은 {value}{unit}입니다. (출처: {sourceTitle}, {referenceYear}년 기준)",
+      "source": null,
+      "status": "DRAFT",
+      "note": "데모용 가상 수치",
+      "origin": "AI_DRAFT_HUMAN_REVIEW",
+      "locale": "ko-KR",
+      "updatedAt": "2026-10-30"
+    }
+  ]
+}

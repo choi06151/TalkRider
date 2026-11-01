@@ -1,0 +1,86 @@
+{
+ "region": "COMMON",
+ "type": "TASTE",
+ "questions": [
+  {
+   "id": "CMN-TASTE-001",
+   "type": "TASTE",
+   "region": "COMMON",
+   "text": "여행 스타일은 어느 쪽에 더 가깝나요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "푹 쉬는 휴양"
+    },
+    {
+     "id": "B",
+     "label": "부지런한 관광"
+    }
+   ],
+   "follow": [
+    "이번 여행은 어느 쪽에 가까운가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TASTE-002",
+   "type": "TASTE",
+   "region": "COMMON",
+   "text": "여행 숙소는 어느 쪽이 더 좋아요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "시설 좋은 호텔"
+    },
+    {
+     "id": "B",
+     "label": "분위기 좋은 감성 숙소"
+    }
+   ],
+   "follow": [
+    "가장 좋았던 숙소는 어디였나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TASTE-003",
+   "type": "TASTE",
+   "region": "COMMON",
+   "text": "차 안에서 듣는 음악은 어느 쪽이 좋아요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "모두가 아는 노래"
+    },
+    {
+     "id": "B",
+     "label": "각자 취향 노래"
+    }
+   ],
+   "follow": [
+    "오늘 꼭 틀고 싶은 노래가 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TASTE-004",
+   "type": "TASTE",
+   "region": "COMMON",
+   "text": "아침 일정은 어느 쪽이 좋아요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "일찍 시작해서 일찍 끝내기"
+    },
+    {
+     "id": "B",
+     "label": "느긋하게 시작하기"
+    }
+   ],
+   "follow": [
+    "제일 좋았던 아침은 어땠나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

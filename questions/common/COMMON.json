@@ -1,0 +1,52 @@
+{
+ "region": "COMMON",
+ "type": "COMMON",
+ "questions": [
+  {
+   "id": "CMN-COM-001",
+   "type": "COMMON",
+   "region": "COMMON",
+   "text": "사과, 바나나, 포도의 공통점은 무엇일까요?",
+   "answers": [
+    "과일"
+   ],
+   "reveal": "정답은 과일이에요.",
+   "follow": [
+    "제일 좋아하는 과일은요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-COM-002",
+   "type": "COMMON",
+   "region": "COMMON",
+   "text": "자동차, 기차, 비행기의 공통점은 무엇일까요?",
+   "answers": [
+    "탈것",
+    "교통수단"
+   ],
+   "reveal": "정답은 탈것(교통수단)이에요.",
+   "follow": [
+    "가장 오래 타 본 건 뭔가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-COM-003",
+   "type": "COMMON",
+   "region": "COMMON",
+   "text": "라면, 김밥, 떡볶이의 공통점은 무엇일까요?",
+   "answers": [
+    "분식"
+   ],
+   "reveal": "정답은 분식이에요.",
+   "follow": [
+    "분식집 단골 메뉴가 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

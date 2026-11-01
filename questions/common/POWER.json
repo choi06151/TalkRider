@@ -1,0 +1,78 @@
+{
+ "region": "COMMON",
+ "type": "POWER",
+ "questions": [
+  {
+   "id": "CMN-POW-001",
+   "type": "POWER",
+   "region": "COMMON",
+   "text": "하루 동안 쓸 수 있는 초능력 하나를 고른다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "하늘을 날기"
+    },
+    {
+     "id": "B",
+     "label": "시간 멈추기"
+    },
+    {
+     "id": "C",
+     "label": "마음 읽기"
+    }
+   ],
+   "follow": [
+    "그 능력으로 가장 먼저 뭘 할까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-POW-002",
+   "type": "POWER",
+   "region": "COMMON",
+   "text": "여행에서 쓸 수 있는 초능력 하나를 고른다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "순간이동"
+    },
+    {
+     "id": "B",
+     "label": "모든 언어 이해"
+    },
+    {
+     "id": "C",
+     "label": "날씨 바꾸기"
+    }
+   ],
+   "follow": [
+    "어디에서 그 능력이 필요할까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-POW-003",
+   "type": "POWER",
+   "region": "COMMON",
+   "text": "운전할 때 갖고 싶은 능력은요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "막히는 길 뚫기"
+    },
+    {
+     "id": "B",
+     "label": "졸음 없애기"
+    },
+    {
+     "id": "C",
+     "label": "주차 자리 찾기"
+    }
+   ],
+   "follow": [
+    "그 능력이 가장 필요했던 날은 언제였나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

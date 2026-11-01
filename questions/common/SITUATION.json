@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "SITUATION",
+ "questions": [
+  {
+   "id": "CMN-SIT-001",
+   "type": "SITUATION",
+   "region": "COMMON",
+   "text": "예약한 숙소가 사라졌다면 가장 먼저 무엇을 할까요?",
+   "follow": [
+    "이 상황에서 가장 침착한 사람은 누굴까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-SIT-002",
+   "type": "SITUATION",
+   "region": "COMMON",
+   "text": "고속도로에서 차가 갑자기 멈췄다면 어떻게 할까요?",
+   "follow": [
+    "가장 먼저 연락할 곳은 어디일까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-SIT-003",
+   "type": "SITUATION",
+   "region": "COMMON",
+   "text": "도착해 보니 가려던 식당이 쉬는 날이라면 어떻게 할까요?",
+   "follow": [
+    "그럴 때 쓰는 나만의 방법이 있나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

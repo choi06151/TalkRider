@@ -1,0 +1,53 @@
+{
+ "region": "COMMON",
+ "type": "TRIVIA",
+ "questions": [
+  {
+   "id": "CMN-TRV-001",
+   "type": "TRIVIA",
+   "region": "COMMON",
+   "text": "태양계에서 가장 큰 행성은 무엇일까요?",
+   "answers": [
+    "목성"
+   ],
+   "reveal": "정답은 목성이에요.",
+   "follow": [
+    "가장 좋아하는 행성은 뭔가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TRV-002",
+   "type": "TRIVIA",
+   "region": "COMMON",
+   "text": "우리나라에서 가장 높은 산은 무엇일까요?",
+   "answers": [
+    "한라산"
+   ],
+   "reveal": "정답은 한라산이에요.",
+   "follow": [
+    "올라가 본 산이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TRV-003",
+   "type": "TRIVIA",
+   "region": "COMMON",
+   "text": "‘모나리자’를 그린 화가는 누구일까요?",
+   "answers": [
+    "레오나르도 다 빈치",
+    "다빈치",
+    "다 빈치"
+   ],
+   "reveal": "정답은 레오나르도 다 빈치예요.",
+   "follow": [
+    "가장 기억에 남는 그림이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

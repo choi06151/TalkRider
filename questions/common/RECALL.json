@@ -1,0 +1,58 @@
+{
+ "region": "COMMON",
+ "type": "RECALL",
+ "questions": [
+  {
+   "id": "CMN-RCL-001",
+   "type": "RECALL",
+   "region": "COMMON",
+   "text": "제가 읽어 드리는 물건을 기억해 두세요. 읽은 뒤에 한 사람씩 기억나는 대로 말해 볼까요?",
+   "follow": [
+    "모두 기억한 사람이 있나요?"
+   ],
+   "items": [
+    "우산",
+    "노트",
+    "사과",
+    "열쇠",
+    "모자"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-RCL-002",
+   "type": "RECALL",
+   "region": "COMMON",
+   "text": "제가 읽어 드리는 여행 짐을 기억해 두세요. 읽은 뒤에 말해 볼까요?",
+   "follow": [
+    "기억하는 요령이 있나요?"
+   ],
+   "items": [
+    "여권",
+    "선글라스",
+    "충전기",
+    "물병",
+    "담요",
+    "카메라"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-RCL-003",
+   "type": "RECALL",
+   "region": "COMMON",
+   "text": "제가 읽어 드리는 메뉴를 기억해 두세요. 읽은 뒤에 말해 볼까요?",
+   "follow": [
+    "가장 먹고 싶은 메뉴는 무엇인가요?"
+   ],
+   "items": [
+    "김밥",
+    "라면",
+    "우동",
+    "돈가스",
+    "떡볶이"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

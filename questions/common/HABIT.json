@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "HABIT",
+ "questions": [
+  {
+   "id": "CMN-HAB-001",
+   "type": "HABIT",
+   "region": "COMMON",
+   "text": "남들은 잘 안 하는 나만의 습관이 있나요?",
+   "follow": [
+    "그 습관이 생긴 이유가 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-HAB-002",
+   "type": "HABIT",
+   "region": "COMMON",
+   "text": "여행 가서 꼭 하는 나만의 루틴이 있나요?",
+   "follow": [
+    "동행이 그 루틴에 맞춰 준 적이 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-HAB-003",
+   "type": "HABIT",
+   "region": "COMMON",
+   "text": "차에 타면 나도 모르게 하는 행동이 있나요?",
+   "follow": [
+    "다른 사람이 보기엔 어떻게 보일까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

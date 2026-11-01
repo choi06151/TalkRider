@@ -1,0 +1,51 @@
+{
+ "region": "COMMON",
+ "type": "NONSENSE",
+ "questions": [
+  {
+   "id": "CMN-NON-001",
+   "type": "NONSENSE",
+   "region": "COMMON",
+   "text": "왕이 넘어지면 무엇일까요?",
+   "answers": [
+    "킹콩"
+   ],
+   "reveal": "왕(King)이 넘어지면 ‘킹콩’이에요.",
+   "follow": [
+    "더 생각나는 넌센스가 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-NON-002",
+   "type": "NONSENSE",
+   "region": "COMMON",
+   "text": "오리가 얼면 무엇이 될까요?",
+   "answers": [
+    "언덕"
+   ],
+   "reveal": "언 오리 → ‘언덕’이에요.",
+   "follow": [
+    "혹시 알고 있는 다른 넌센스는요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-NON-003",
+   "type": "NONSENSE",
+   "region": "COMMON",
+   "text": "바나나가 웃으면 무엇일까요?",
+   "answers": [
+    "바나나킥"
+   ],
+   "reveal": "바나나가 ‘킥킥’ 웃으면 바나나킥이에요.",
+   "follow": [
+    "제일 웃겼던 넌센스는 뭐였나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

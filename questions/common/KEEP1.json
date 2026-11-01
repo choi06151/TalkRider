@@ -1,0 +1,86 @@
+{
+ "region": "COMMON",
+ "type": "KEEP1",
+ "questions": [
+  {
+   "id": "CMN-KEEP-001",
+   "type": "KEEP1",
+   "region": "COMMON",
+   "text": "치킨, 피자, 햄버거 중 평생 하나만 먹는다면 무엇을 남길까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "치킨"
+    },
+    {
+     "id": "B",
+     "label": "피자"
+    },
+    {
+     "id": "C",
+     "label": "햄버거"
+    }
+   ],
+   "follow": [
+    "선택하지 못한 음식 중 가장 아쉬운 건요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-KEEP-002",
+   "type": "KEEP1",
+   "region": "COMMON",
+   "text": "봄, 여름, 가을, 겨울 중 하나의 계절만 남긴다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "봄"
+    },
+    {
+     "id": "B",
+     "label": "여름"
+    },
+    {
+     "id": "C",
+     "label": "가을"
+    },
+    {
+     "id": "D",
+     "label": "겨울"
+    }
+   ],
+   "follow": [
+    "그 계절의 가장 좋은 기억은 뭔가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-KEEP-003",
+   "type": "KEEP1",
+   "region": "COMMON",
+   "text": "휴게소 음식 중 하나만 남긴다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "호두과자"
+    },
+    {
+     "id": "B",
+     "label": "우동"
+    },
+    {
+     "id": "C",
+     "label": "소떡소떡"
+    },
+    {
+     "id": "D",
+     "label": "알감자"
+    }
+   ],
+   "follow": [
+    "휴게소에서 꼭 들르는 코너가 있나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

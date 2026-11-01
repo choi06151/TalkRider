@@ -1,37 +1,20 @@
 {
-  "schemaVersion": 1,
-  "regions": [
-    {
-      "code": "COMMON",
-      "name": "공통",
-      "level": "COMMON",
-      "aliases": []
-    },
-    {
-      "code": "DAEJEON",
-      "name": "대전",
-      "level": "CITY",
-      "aliases": [
-        "대전광역시",
-        "대전시"
-      ]
-    },
-    {
-      "code": "BUSAN",
-      "name": "부산",
-      "level": "CITY",
-      "aliases": [
-        "부산광역시"
-      ]
-    },
-    {
-      "code": "JEONJU",
-      "name": "전주",
-      "level": "CITY",
-      "aliases": [
-        "전주시",
-        "전북 전주"
-      ]
-    }
-  ]
+ "regions": [
+  {
+   "code": "COMMON",
+   "name": "공통"
+  },
+  {
+   "code": "DAEJEON",
+   "name": "대전"
+  },
+  {
+   "code": "BUSAN",
+   "name": "부산"
+  },
+  {
+   "code": "JEONJU",
+   "name": "전주"
+  }
+ ]
 }

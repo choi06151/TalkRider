@@ -1,0 +1,219 @@
+{
+ "region": "COMMON",
+ "type": "NUMBER",
+ "questions": [
+  {
+   "id": "CMN-EST-001",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "경부고속도로는 처음부터 끝까지 몇 km일까요?",
+   "num": {
+    "value": 416,
+    "unit": "km",
+    "tol": 10
+   },
+   "hints": [
+    "서울에서 부산까지 이어져요.",
+    "400이 넘어요."
+   ],
+   "follow": [
+    "지금까지 가장 길게 달려본 길은 몇 km쯤이었나요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-002",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "서울에서 부산까지 직선거리는 몇 km쯤일까요?",
+   "num": {
+    "value": 325,
+    "unit": "km",
+    "tol": 10
+   },
+   "hints": [
+    "도로 거리보다 짧아요."
+   ],
+   "follow": [
+    "길로 가면 얼마나 더 걸릴까요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-003",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "지구에서 달까지 평균 거리는 몇 km쯤일까요?",
+   "num": {
+    "value": 384400,
+    "unit": "km",
+    "tol": 15
+   },
+   "hints": [
+    "만 단위가 아니라 더 커요.",
+    "38만 km 근처예요."
+   ],
+   "follow": [
+    "달까지 차로 간다면 며칠이 걸릴까요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-004",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "승용차 타이어가 한 바퀴 굴러가면 몇 cm를 갈까요?",
+   "num": {
+    "value": 200,
+    "unit": "cm",
+    "tol": 15
+   },
+   "hints": [
+    "2미터 안팎이에요."
+   ],
+   "follow": [
+    "타이어가 몇 바퀴 돌면 1km일까요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-005",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "무지개는 몇 가지 색일까요?",
+   "num": {
+    "value": 7,
+    "unit": "가지",
+    "tol": 15
+   },
+   "hints": [
+    "빨주노초 다음이 있어요."
+   ],
+   "follow": [
+    "무지개를 마지막으로 본 건 언제였나요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "aud": "KID",
+   "retired": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-006",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "일 년은 며칠일까요?",
+   "num": {
+    "value": 365,
+    "unit": "일",
+    "tol": 3
+   },
+   "hints": [
+    "삼백 몇십 일이에요."
+   ],
+   "follow": [
+    "가장 기다려지는 날은 언제예요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "aud": "KID",
+   "retired": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EST-007",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "우리 몸에는 뼈가 몇 개쯤 있을까요?",
+   "num": {
+    "value": 206,
+    "unit": "개",
+    "tol": 15
+   },
+   "hints": [
+    "백 개보다는 많아요.",
+    "이백 개 근처예요."
+   ],
+   "follow": [
+    "제일 큰 뼈는 어디에 있을까요?"
+   ],
+   "refNote": "샘플 · 출처 확인 전",
+   "sample": true,
+   "aud": "KID",
+   "ages": [
+    "ELEM",
+    "TEEN"
+   ],
+   "retired": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-NUM-001",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "아프리카코끼리의 임신 기간은 몇 개월쯤일까요?",
+   "num": {
+    "value": 22,
+    "unit": "개월",
+    "tol": 15
+   },
+   "hints": [
+    "일 년이 넘어요."
+   ],
+   "follow": [
+    "임신 기간이 가장 짧은 동물은 뭘까요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-NUM-002",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "에펠탑의 높이는 몇 미터쯤일까요?",
+   "num": {
+    "value": 330,
+    "unit": "m",
+    "tol": 10
+   },
+   "hints": [
+    "삼백 미터 정도예요."
+   ],
+   "follow": [
+    "가장 높이 올라가 본 곳은 어디인가요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-NUM-003",
+   "type": "NUMBER",
+   "region": "COMMON",
+   "text": "기린의 키는 몇 미터쯤일까요?",
+   "num": {
+    "value": 5,
+    "unit": "m",
+    "tol": 20
+   },
+   "hints": [
+    "오 미터 안팎이에요."
+   ],
+   "follow": [
+    "동물원에서 제일 큰 동물은 뭐였나요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  }
+ ]
+}

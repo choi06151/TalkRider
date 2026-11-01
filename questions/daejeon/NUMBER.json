@@ -1,0 +1,27 @@
+{
+ "region": "DAEJEON",
+ "type": "NUMBER",
+ "questions": [
+  {
+   "id": "DAEJEON-EST-001",
+   "type": "NUMBER",
+   "region": "DAEJEON",
+   "text": "성심당 소금빵은 하루에 몇 개쯤 팔릴까요?",
+   "num": {
+    "value": 1000,
+    "unit": "개",
+    "tol": 20
+   },
+   "hints": [
+    "평일과 주말이 달라요.",
+    "줄이 길 때가 많아요."
+   ],
+   "follow": [
+    "각자 생각한 숫자와 이유를 말해볼까요?"
+   ],
+   "refNote": "데모용 가상 수치",
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

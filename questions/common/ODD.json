@@ -1,0 +1,99 @@
+{
+ "region": "COMMON",
+ "type": "ODD",
+ "questions": [
+  {
+   "id": "CMN-ODD-001",
+   "type": "ODD",
+   "region": "COMMON",
+   "text": "다른 하나를 찾아 볼까요? 사과, 배, 당근, 포도",
+   "choices": [
+    {
+     "id": "A",
+     "label": "사과"
+    },
+    {
+     "id": "B",
+     "label": "배"
+    },
+    {
+     "id": "C",
+     "label": "당근"
+    },
+    {
+     "id": "D",
+     "label": "포도"
+    }
+   ],
+   "answer": "C",
+   "reveal": "당근만 채소예요.",
+   "follow": [
+    "제일 좋아하는 채소는 뭔가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-ODD-002",
+   "type": "ODD",
+   "region": "COMMON",
+   "text": "다른 하나를 찾아 볼까요? 자동차, 기차, 비행기, 책상",
+   "choices": [
+    {
+     "id": "A",
+     "label": "자동차"
+    },
+    {
+     "id": "B",
+     "label": "기차"
+    },
+    {
+     "id": "C",
+     "label": "비행기"
+    },
+    {
+     "id": "D",
+     "label": "책상"
+    }
+   ],
+   "answer": "D",
+   "reveal": "책상만 탈것이 아니에요.",
+   "follow": [
+    "제일 좋아하는 탈것은요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-ODD-003",
+   "type": "ODD",
+   "region": "COMMON",
+   "text": "다른 하나를 찾아 볼까요? 서울, 부산, 도쿄, 대구",
+   "choices": [
+    {
+     "id": "A",
+     "label": "서울"
+    },
+    {
+     "id": "B",
+     "label": "부산"
+    },
+    {
+     "id": "C",
+     "label": "도쿄"
+    },
+    {
+     "id": "D",
+     "label": "대구"
+    }
+   ],
+   "answer": "C",
+   "reveal": "도쿄만 우리나라 도시가 아니에요.",
+   "follow": [
+    "가 본 도시 중 가장 좋았던 곳은요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

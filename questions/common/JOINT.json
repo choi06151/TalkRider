@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "JOINT",
+ "questions": [
+  {
+   "id": "CMN-JNT-001",
+   "type": "JOINT",
+   "region": "COMMON",
+   "text": "우리끼리 작은 가게를 연다면 어떤 가게가 좋을까요? 가게 이름도 정해 볼까요?",
+   "follow": [
+    "각자 맡고 싶은 역할은요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-JNT-002",
+   "type": "JOINT",
+   "region": "COMMON",
+   "text": "우리끼리 여행 동아리를 만든다면 이름과 규칙 한 가지를 정해 볼까요?",
+   "follow": [
+    "가장 먼저 가고 싶은 곳은 어디인가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-JNT-003",
+   "type": "JOINT",
+   "region": "COMMON",
+   "text": "우리가 같이 신제품을 만든다면 어떤 제품이 좋을까요?",
+   "follow": [
+    "누가 가장 먼저 쓰게 될까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

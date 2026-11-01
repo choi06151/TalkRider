@@ -1,0 +1,29 @@
+{
+ "region": "JEONJU",
+ "type": "BAL",
+ "questions": [
+  {
+   "id": "JEONJU-BAL-001",
+   "type": "BAL",
+   "region": "JEONJU",
+   "text": "전주에서 비빔밥과 콩나물국밥 중 하나만 먹는다면?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "비빔밥"
+    },
+    {
+     "id": "B",
+     "label": "콩나물국밥"
+    }
+   ],
+   "follow": [
+    "아침으로 먹기엔 어느 쪽이 좋을까요?"
+   ],
+   "tags": [
+    "전주"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

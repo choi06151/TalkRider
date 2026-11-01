@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "CHOSUNG",
+ "questions": [
+  {
+   "id": "CMN-CHO-001",
+   "type": "CHOSUNG",
+   "region": "COMMON",
+   "text": "초성 퀴즈예요. ‘ㅂㄱㄱ’는 무엇일까요?",
+   "answers": [
+    "불고기"
+   ],
+   "reveal": "정답은 불고기예요.",
+   "follow": [
+    "불고기와 어울리는 반찬은요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-CHO-002",
+   "type": "CHOSUNG",
+   "region": "COMMON",
+   "text": "초성 퀴즈예요. ‘ㅎㄱㅅ’는 무엇일까요?",
+   "answers": [
+    "휴게소"
+   ],
+   "reveal": "정답은 휴게소예요.",
+   "follow": [
+    "가장 좋았던 휴게소는 어디인가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-CHO-003",
+   "type": "CHOSUNG",
+   "region": "COMMON",
+   "text": "초성 퀴즈예요. ‘ㅇㅇㅅㅋㄹ’은 무엇일까요?",
+   "answers": [
+    "아이스크림"
+   ],
+   "reveal": "정답은 아이스크림이에요.",
+   "follow": [
+    "제일 좋아하는 맛은 뭔가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-CHO-004",
+   "type": "CHOSUNG",
+   "region": "COMMON",
+   "text": "초성 퀴즈예요. ‘ㅊㅋ’은 무엇일까요?",
+   "answers": [
+    "치킨"
+   ],
+   "reveal": "정답은 치킨이에요.",
+   "follow": [
+    "치킨은 양념 vs 후라이드?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

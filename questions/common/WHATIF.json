@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "WHATIF",
+ "questions": [
+  {
+   "id": "CMN-WIF-001",
+   "type": "WHATIF",
+   "region": "COMMON",
+   "text": "순간이동을 딱 한 번만 할 수 있다면 어디로 갈까요?",
+   "follow": [
+    "거기서 가장 먼저 무엇을 할까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-WIF-002",
+   "type": "WHATIF",
+   "region": "COMMON",
+   "text": "내일 하루를 다른 사람으로 살 수 있다면 누구로 살아 보고 싶나요?",
+   "follow": [
+    "그 사람의 하루에서 가장 궁금한 건요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-WIF-003",
+   "type": "WHATIF",
+   "region": "COMMON",
+   "text": "갑자기 일주일의 휴가가 생긴다면 무엇을 하고 싶나요?",
+   "follow": [
+    "누구와 함께 가고 싶은가요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

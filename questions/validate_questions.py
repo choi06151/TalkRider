@@ -1,155 +1,84 @@
 #!/usr/bin/env python3
-"""CAR PLAYGROUND 소재 DB 검증 스크립트.
+"""CAR PLAYGROUND 문항 DB 검증 (v1.0, 45+ 유형 카탈로그 기준).
 
-사용법: python validate_questions.py [questions 폴더 경로]
+사용법: python validate_questions.py [questions 폴더]
 종료 코드 0 = 오류 없음, 1 = 오류 있음. 경고(WARN)는 종료 코드에 영향 없음.
 """
-import json
-import re
-import sys
+import json, re, sys
 from pathlib import Path
 
-CATEGORIES = {"BALANCE", "ESTIMATE", "QUIZ", "DEBATE", "MEMORY"}
-ANSWER_TYPES = {"CHOICE", "NUMBER", "TEXT", "OPEN"}
-CATEGORY_ANSWER_TYPE = {
-    "BALANCE": "CHOICE", "ESTIMATE": "NUMBER", "QUIZ": "TEXT",
-    "DEBATE": "OPEN", "MEMORY": "OPEN",
-}
 AUDIENCES = {"ALL", "KID", "ADULT", "FRIENDS"}
-AGES = {"PRE", "ELEM", "TEEN"}
 STATUSES = {"DRAFT", "REVIEWED", "PUBLISHED", "RETIRED"}
-MAX_SPOKEN_CHARS = 90  # 차 안에서 한 번에 듣기 좋은 길이(제안값, 데이터로 조정 가능)
-ID_PATTERN = re.compile(r"^[A-Z]+-[A-Z]{3}-\d{3,}$")
+MAX_SPOKEN = 90
+ID_RE = re.compile(r"^[A-Z]+-[A-Z0-9]+-\d{3}$")
+# kind별 필수 필드
+NEED = {
+    "choice": ["choices"], "predict": ["choices"], "qchoice": ["choices", "answer"],
+    "text": ["answers"], "hint": ["answers", "hints"], "number": ["num"],
+    "rank": ["choices"], "open": [], "speak": [], "sound": ["audio"],
+}
 
 
-def load(path: Path):
-    with path.open(encoding="utf-8") as f:
+def load(p):
+    with p.open(encoding="utf-8") as f:
         return json.load(f)
 
 
-def main(root: Path) -> int:
-    errors, warns = [], []
-    region_codes = {r["code"] for r in load(root / "regions.json")["regions"]}
-    mode_categories = {m["category"] for m in load(root / "modes.json")["modes"]}
-    seen_ids = set()
-    count = 0
-    per_mode = {}
-    per_aud = {}
-
+def main(root):
+    cat = load(root / "catalog.json")
+    types = {t["id"]: t for t in cat["types"]}
+    regions = {r["code"] for r in load(root / "regions.json")["regions"]}
+    errors, warns, seen = [], [], set()
+    per_type, n = {}, 0
     for path in sorted(root.glob("*/*.json")):
         data = load(path)
-        folder_region = path.parent.name.upper()
-        for item in data["questions"]:
-            count += 1
-            qid = item.get("id", "<no id>")
+        if not path.stem.isupper():
+            continue  # 이전 버전(소문자 파일명)은 무시
+        folder = path.parent.name.upper()
+        for q in data["questions"]:
+            n += 1
+            qid = q.get("id", "<no id>")
             where = f"{path.relative_to(root)}:{qid}"
-
-            def err(msg):
-                errors.append(f"{where}: {msg}")
-
-            def warn(msg):
-                warns.append(f"{where}: {msg}")
-
-            if not ID_PATTERN.match(qid):
-                err("id 형식은 REGION-CAT-NNN")
-            if qid in seen_ids:
-                err("id 중복")
-            seen_ids.add(qid)
-
-            cat = item.get("category")
-            if cat not in CATEGORIES:
-                err(f"category 값 오류: {cat}")
-                continue
-            if cat not in mode_categories:
-                err("modes.json에 연결된 모드가 없는 category")
-            if item.get("region") not in region_codes:
-                err(f"regions.json에 없는 region: {item.get('region')}")
-            if item.get("region") != folder_region:
-                err(f"폴더({folder_region})와 region({item.get('region')}) 불일치")
-            if path.stem.upper() != cat:
-                err(f"파일명({path.stem})과 category({cat}) 불일치")
-            if item.get("difficulty") not in (1, 2, 3):
-                err("difficulty는 1~3")
-            atype = item.get("answerType")
-            if atype not in ANSWER_TYPES:
-                err(f"answerType 값 오류: {atype}")
-            elif atype != CATEGORY_ANSWER_TYPE[cat]:
-                err(f"{cat}의 answerType은 {CATEGORY_ANSWER_TYPE[cat]}이어야 함")
-            aud = item.get("audience", "ALL")
-            if aud not in AUDIENCES:
-                err(f"audience 값 오류: {aud}")
-            ages = item.get("ages")
-            if ages:
-                if aud != "KID":
-                    err("ages는 audience=KID일 때만 사용")
-                elif not set(ages) <= AGES:
-                    err(f"ages 값 오류: {ages}")
-            status = item.get("status")
-            if status not in STATUSES:
-                err(f"status 값 오류: {status}")
-
-            text = item.get("spokenText") or item.get("text", "")
-            if not text:
-                err("text 없음")
-            elif len(text) > MAX_SPOKEN_CHARS:
-                warn(f"읽어줄 문장이 {len(text)}자: {MAX_SPOKEN_CHARS}자 이내 권장")
-
-            if atype == "CHOICE":
-                choices = item.get("choices") or []
-                ids = [c.get("id") for c in choices]
-                if len(choices) != 2 or len(set(ids)) != 2:
-                    err("CHOICE는 서로 다른 id의 선택지 2개 필요")
-            if atype == "NUMBER":
-                ans = item.get("answer") or {}
-                for key in ("unit", "tolerancePct", "scoring"):
-                    if key not in ans:
-                        err(f"NUMBER answer.{key} 필요")
-            if atype == "TEXT":
-                if not item.get("answers"):
-                    err("TEXT는 answers 필요")
-
-            needs_fact = atype in ("NUMBER", "TEXT")
-            if needs_fact and status in ("REVIEWED", "PUBLISHED"):
-                src = item.get("source") or {}
-                if not src.get("title") or not src.get("referenceYear"):
-                    err("사실 기반 소재는 source.title과 source.referenceYear 필수")
-                if atype == "NUMBER" and (item.get("answer") or {}).get("value") is None:
-                    err("PUBLISHED/REVIEWED NUMBER 소재는 answer.value 필수")
-            if needs_fact and status == "DRAFT":
-                warn("DRAFT 사실 소재: 앱 노출 금지, 출처 확인 후 REVIEWED 이상으로 변경")
-
-            if atype == "OPEN" and not item.get("followUps"):
-                warn("OPEN 소재는 followUps(대화 이어가기 멘트) 권장")
-
-            if status == "PUBLISHED":
-                per_mode.setdefault((cat, item.get("region")), 0)
-                per_mode[(cat, item.get("region"))] += 1
-                if item.get("region") == "COMMON":
-                    per_aud[(cat, aud)] = per_aud.get((cat, aud), 0) + 1
-
-    # 게임당 5문제 출제 가능 여부 점검 (COMMON + 지역 합산)
-    for cat in sorted(CATEGORIES):
-        total_common = per_mode.get((cat, "COMMON"), 0)
-        if total_common < 5:
-            warns.append(f"[분량] {cat} COMMON 게시 소재 {total_common}개: 게임당 5문제 채우려면 최소 5개 필요")
-
-    # 구성별 분량: 아이와 함께 = ALL+KID, 어른끼리 = ALL+ADULT, 친구끼리 = ALL+ADULT+FRIENDS (게임당 5문제)
-    for cat in sorted(c for c in CATEGORIES if c != "QUIZ"):
-        g = lambda a: per_aud.get((cat, a), 0)
-        for label, n in (("아이와 함께", g("ALL") + g("KID")), ("어른끼리", g("ALL") + g("ADULT")),
-                         ("친구끼리", g("ALL") + g("ADULT") + g("FRIENDS"))):
-            if n < 5:
-                warns.append(f"[분량] {cat} {label} 구성 COMMON 소재 {n}개: 게임당 5문제에 부족")
-
-    print(f"검사한 소재: {count}개, 파일 {len(list(root.glob('*/*.json')))}개")
-    for w in warns:
-        print("WARN ", w)
-    for e in errors:
-        print("ERROR", e)
-    print(f"결과: 오류 {len(errors)}건, 경고 {len(warns)}건")
+            e = lambda m: errors.append(f"{where}: {m}")
+            w = lambda m: warns.append(f"{where}: {m}")
+            if not ID_RE.match(qid): e("id 형식은 REGION-TYPE-NNN")
+            if qid in seen: e("id 중복")
+            seen.add(qid)
+            t = types.get(q.get("type"))
+            if not t: e(f"catalog.json에 없는 type: {q.get('type')}"); continue
+            if path.stem != q["type"]: e(f"파일명({path.stem})과 type({q['type']}) 불일치")
+            if q.get("region") not in regions: e(f"regions.json에 없는 region: {q.get('region')}")
+            if q.get("region") != folder: e(f"폴더({folder})와 region({q.get('region')}) 불일치")
+            if q.get("status") not in STATUSES: e(f"status 값 오류: {q.get('status')}")
+            aud = q.get("aud", "ALL")
+            if aud not in AUDIENCES: e(f"aud 값 오류: {aud}")
+            if aud == "KID" and not q.get("retired"): w("KID 문항은 v1.0에서 사용하지 않음(retired 권장)")
+            if not t.get("ready", True): continue
+            for f in NEED.get(t["kind"], []):
+                if not q.get(f): e(f"{t['kind']} 유형에 {f} 필요")
+            if t["kind"] in ("choice", "predict", "qchoice", "rank"):
+                k = len(q.get("choices", []))
+                if k < 2 or k > 5: e("choices는 2~5개")
+            if t["kind"] == "qchoice" and q.get("answer") not in [c["id"] for c in q.get("choices", [])]:
+                e("answer가 choices의 id가 아님")
+            if t["kind"] == "number":
+                nm = q.get("num") or {}
+                if not all(k in nm for k in ("value", "unit", "tol")): e("num에 value/unit/tol 필요")
+            if t["kind"] in ("text", "number", "qchoice", "hint") and q.get("region") and not q.get("sample") and not (q.get("source") and q.get("referenceYear")):
+                e("사실 기반 문항은 source와 referenceYear 필요 (샘플이면 sample:true)")
+            if q.get("sample"): w("샘플 문항: 출처 확인 전")
+            if len(q.get("text", "")) > MAX_SPOKEN: w(f"문장이 {MAX_SPOKEN}자 초과: 음성으로 듣기엔 길어요")
+            if not q.get("follow"): w("follow(추가 질문) 없음")
+            per_type[q["type"]] = per_type.get(q["type"], 0) + 1
+    for tid, t in types.items():
+        if t.get("ready", True) and per_type.get(tid, 0) < 2 and tid != "BALP":
+            warns.append(f"유형 {tid}: 문항 {per_type.get(tid, 0)}개 (권장 3개 이상)")
+    print(f"문항 {n}개 · 유형 {len(per_type)}/{len(types)}")
+    for m in warns[:200]: print("WARN ", m)
+    for m in errors: print("ERROR", m)
+    print(f"오류 {len(errors)} · 경고 {len(warns)}")
     return 1 if errors else 0
 
 
 if __name__ == "__main__":
-    base = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent
-    sys.exit(main(base))
+    sys.exit(main(Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).parent)))

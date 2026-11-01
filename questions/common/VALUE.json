@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "VALUE",
+ "questions": [
+  {
+   "id": "CMN-VAL-001",
+   "type": "VALUE",
+   "region": "COMMON",
+   "text": "일할 때 더 중요한 것은 무엇인가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "높은 연봉"
+    },
+    {
+     "id": "B",
+     "label": "충분한 여가"
+    }
+   ],
+   "follow": [
+    "그 선택의 이유를 말해 볼까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-VAL-002",
+   "type": "VALUE",
+   "region": "COMMON",
+   "text": "살 곳을 고른다면 더 중요한 것은 무엇인가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "편한 교통"
+    },
+    {
+     "id": "B",
+     "label": "조용한 환경"
+    }
+   ],
+   "follow": [
+    "지금 사는 곳에서 가장 마음에 드는 점은요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-VAL-003",
+   "type": "VALUE",
+   "region": "COMMON",
+   "text": "친구 관계에서 더 중요한 것은 무엇인가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "자주 만나기"
+    },
+    {
+     "id": "B",
+     "label": "오래 이어가기"
+    }
+   ],
+   "follow": [
+    "오래된 친구 이야기를 하나 해 볼까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

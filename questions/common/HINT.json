@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "HINT",
+ "questions": [
+  {
+   "id": "CMN-HINT-001",
+   "type": "HINT",
+   "region": "COMMON",
+   "text": "힌트를 하나씩 드릴게요. 이 동물은 무엇일까요?",
+   "answers": [
+    "코끼리"
+   ],
+   "reveal": "정답은 코끼리예요.",
+   "follow": [
+    "코끼리를 직접 본 적이 있나요?"
+   ],
+   "hints": [
+    "동물이에요.",
+    "코가 아주 길어요.",
+    "귀가 아주 커요."
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-HINT-002",
+   "type": "HINT",
+   "region": "COMMON",
+   "text": "힌트를 하나씩 드릴게요. 이곳은 어디일까요?",
+   "answers": [
+    "에펠탑"
+   ],
+   "reveal": "정답은 에펠탑이에요.",
+   "follow": [
+    "가 보고 싶은 해외 명소는요?"
+   ],
+   "hints": [
+    "유명한 건축물이에요.",
+    "프랑스에 있어요.",
+    "철로 만든 탑이에요."
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-HINT-003",
+   "type": "HINT",
+   "region": "COMMON",
+   "text": "힌트를 하나씩 드릴게요. 이 음식은 무엇일까요?",
+   "answers": [
+    "김밥"
+   ],
+   "reveal": "정답은 김밥이에요.",
+   "follow": [
+    "소풍 가서 먹은 도시락 기억이 있나요?"
+   ],
+   "hints": [
+    "한국 음식이에요.",
+    "돌돌 말아서 만들어요.",
+    "소풍 갈 때 자주 먹어요."
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

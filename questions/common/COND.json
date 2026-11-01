@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "COND",
+ "questions": [
+  {
+   "id": "CMN-COND-001",
+   "type": "COND",
+   "region": "COMMON",
+   "text": "100만 원을 받는 대신 한 달 동안 스마트폰 없이 살기, 가능한가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "한다"
+    },
+    {
+     "id": "B",
+     "label": "안 한다"
+    }
+   ],
+   "follow": [
+    "가장 힘들 것 같은 순간은 언제일까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-COND-002",
+   "type": "COND",
+   "region": "COMMON",
+   "text": "평생 해외여행을 공짜로 다니는 대신 국내 여행은 못 간다면, 받아들일까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "받아들인다"
+    },
+    {
+     "id": "B",
+     "label": "안 받아들인다"
+    }
+   ],
+   "follow": [
+    "그래도 꼭 가고 싶은 국내 장소가 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-COND-003",
+   "type": "COND",
+   "region": "COMMON",
+   "text": "일주일 동안 매일 같은 메뉴만 먹으면 상금이 있다면, 도전할까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "도전한다"
+    },
+    {
+     "id": "B",
+     "label": "안 한다"
+    }
+   ],
+   "follow": [
+    "어떤 메뉴라면 일주일도 가능할까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

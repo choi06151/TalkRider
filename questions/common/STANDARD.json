@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "STANDARD",
+ "questions": [
+  {
+   "id": "CMN-STD-001",
+   "type": "STANDARD",
+   "region": "COMMON",
+   "text": "맛집에서는 최대 몇 분까지 기다릴 수 있을까요? 각자 기준을 말해 볼까요?",
+   "follow": [
+    "가장 오래 기다린 기록은 얼마인가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-STD-002",
+   "type": "STANDARD",
+   "region": "COMMON",
+   "text": "운전자가 쉬지 않고 달려도 되는 시간은 최대 몇 시간일까요?",
+   "follow": [
+    "쉬어 가는 기준을 함께 정해 볼까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-STD-003",
+   "type": "STANDARD",
+   "region": "COMMON",
+   "text": "여행 중 하루에 몇 곳까지 들르는 게 적당할까요?",
+   "follow": [
+    "우리 모두 만족하는 숫자는 몇일까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "region": "BUSAN",
+ "type": "BAL",
+ "questions": [
+  {
+   "id": "BUSAN-BAL-001",
+   "type": "BAL",
+   "region": "BUSAN",
+   "text": "부산에서 돼지국밥과 밀면 중 하나만 먹을 수 있다면?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "돼지국밥"
+    },
+    {
+     "id": "B",
+     "label": "밀면"
+    }
+   ],
+   "follow": [
+    "어느 쪽이 해장에 더 좋을까요?"
+   ],
+   "tags": [
+    "부산"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "region": "COMMON",
+ "type": "MCQ",
+ "questions": [
+  {
+   "id": "CMN-MCQ-001",
+   "type": "MCQ",
+   "region": "COMMON",
+   "text": "우리나라에서 가장 긴 강은 어디일까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "한강"
+    },
+    {
+     "id": "B",
+     "label": "낙동강"
+    },
+    {
+     "id": "C",
+     "label": "금강"
+    }
+   ],
+   "answer": "B",
+   "reveal": "정답은 낙동강이에요.",
+   "follow": [
+    "가장 좋아하는 강가는 어디인가요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-MCQ-002",
+   "type": "MCQ",
+   "region": "COMMON",
+   "text": "한글을 만든 왕은 누구일까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "태종"
+    },
+    {
+     "id": "B",
+     "label": "세종대왕"
+    },
+    {
+     "id": "C",
+     "label": "정조"
+    }
+   ],
+   "answer": "B",
+   "reveal": "정답은 세종대왕이에요.",
+   "follow": [
+    "한글에서 좋아하는 글자가 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-MCQ-003",
+   "type": "MCQ",
+   "region": "COMMON",
+   "text": "무지개 색이 아닌 것은 무엇일까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "보라"
+    },
+    {
+     "id": "B",
+     "label": "분홍"
+    },
+    {
+     "id": "C",
+     "label": "파랑"
+    }
+   ],
+   "answer": "B",
+   "reveal": "분홍은 무지개 일곱 색에 들어가지 않아요.",
+   "follow": [
+    "마지막으로 본 무지개는 언제였나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-MCQ-004",
+   "type": "MCQ",
+   "region": "COMMON",
+   "text": "지구에서 가장 가까운 별은 무엇일까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "북극성"
+    },
+    {
+     "id": "B",
+     "label": "시리우스"
+    },
+    {
+     "id": "C",
+     "label": "태양"
+    }
+   ],
+   "answer": "C",
+   "reveal": "정답은 태양이에요.",
+   "follow": [
+    "가장 좋아하는 별자리는요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

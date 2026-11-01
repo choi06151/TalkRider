@@ -1,0 +1,51 @@
+{
+ "region": "COMMON",
+ "type": "THREE",
+ "questions": [
+  {
+   "id": "CMN-THR-001",
+   "type": "THREE",
+   "region": "COMMON",
+   "text": "‘우산, 우주선, 편의점’ 세 단어로 짧은 이야기를 만들어 볼까요?",
+   "follow": [
+    "이 이야기의 제목은 뭐라고 할까요?"
+   ],
+   "items": [
+    "우산",
+    "우주선",
+    "편의점"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-THR-002",
+   "type": "THREE",
+   "region": "COMMON",
+   "text": "‘고래, 지하철, 열쇠’ 세 단어로 짧은 이야기를 만들어 볼까요?",
+   "follow": [
+    "이 이야기의 결말을 바꿔 볼까요?"
+   ],
+   "items": [
+    "고래",
+    "지하철",
+    "열쇠"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-THR-003",
+   "type": "THREE",
+   "region": "COMMON",
+   "text": "‘휴게소, 로봇, 도넛’ 세 단어로 짧은 이야기를 만들어 볼까요?",
+   "follow": [
+    "이야기에 한 줄 더 붙인다면요?"
+   ],
+   "items": [
+    "휴게소",
+    "로봇",
+    "도넛"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

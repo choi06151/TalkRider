@@ -1,0 +1,450 @@
+{
+ "version": "1.0",
+ "groups": [
+  {
+   "id": "CHOICE",
+   "name": "선택",
+   "tone": "var(--coral)",
+   "desc": "둘 중에 고르고 이유를 나눠요"
+  },
+  {
+   "id": "QUIZ",
+   "name": "퀴즈",
+   "tone": "var(--sun)",
+   "desc": "함께 맞히고 정답을 확인해요"
+  },
+  {
+   "id": "SOUND",
+   "name": "소리",
+   "tone": "var(--sea)",
+   "desc": "들려주는 소리로 맞혀요"
+  },
+  {
+   "id": "EXP",
+   "name": "경험",
+   "tone": "var(--mint)",
+   "desc": "서로의 경험을 꺼내요"
+  },
+  {
+   "id": "IMAGINE",
+   "name": "상상",
+   "tone": "var(--grape)",
+   "desc": "만약에를 상상해요"
+  },
+  {
+   "id": "TALK",
+   "name": "토론",
+   "tone": "#ff9ec7",
+   "desc": "생각을 나누고 함께 정해요"
+  },
+  {
+   "id": "SPEAK",
+   "name": "말하기",
+   "tone": "#7bd3c6",
+   "desc": "말로 이어 가는 놀이예요"
+  }
+ ],
+ "types": [
+  {
+   "id": "BAL",
+   "g": "CHOICE",
+   "name": "밸런스 게임",
+   "ex": "평생 여름 vs 평생 겨울",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "BALP",
+   "g": "CHOICE",
+   "name": "선택 예상하기",
+   "ex": "동승자가 어느 쪽을 고를지 먼저 맞혀 보기",
+   "kind": "predict",
+   "pool": "BAL",
+   "ready": true
+  },
+  {
+   "id": "TASTE",
+   "g": "CHOICE",
+   "name": "취향 고르기",
+   "ex": "여행은 휴양 vs 관광",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "DILEMMA",
+   "g": "CHOICE",
+   "name": "양자택일 딜레마",
+   "ex": "맛은 최고지만 불친절한 식당 vs 평범하지만 친절한 식당",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "COND",
+   "g": "CHOICE",
+   "name": "조건부 선택",
+   "ex": "100만 원을 받는 대신 한 달 동안 스마트폰 없이 살기, 가능?",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "KEEP1",
+   "g": "CHOICE",
+   "name": "하나만 남기기",
+   "ex": "치킨·피자·햄버거 중 평생 하나만 먹는다면?",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "DROP1",
+   "g": "CHOICE",
+   "name": "하나만 없애기",
+   "ex": "모기·바퀴벌레·파리 중 하나를 없앤다면?",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "RANK",
+   "g": "CHOICE",
+   "name": "순위 정하기",
+   "ex": "여행에서 음식·숙소·관광·쇼핑의 우선순위는?",
+   "kind": "rank",
+   "cue": "우리 순위는",
+   "ready": true
+  },
+  {
+   "id": "NONSENSE",
+   "g": "QUIZ",
+   "name": "넌센스 퀴즈",
+   "ex": "말장난이나 엉뚱한 발상으로 정답 맞히기",
+   "kind": "text",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "TRIVIA",
+   "g": "QUIZ",
+   "name": "상식 퀴즈",
+   "ex": "태양계에서 가장 큰 행성은?",
+   "kind": "text",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "OX",
+   "g": "QUIZ",
+   "name": "OX 퀴즈",
+   "ex": "주어진 설명이 사실인지 판단하기",
+   "kind": "qchoice",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "MCQ",
+   "g": "QUIZ",
+   "name": "객관식 퀴즈",
+   "ex": "보기 세 개를 듣고 정답 고르기",
+   "kind": "qchoice",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "CHOSUNG",
+   "g": "QUIZ",
+   "name": "초성 퀴즈",
+   "ex": "음식 초성 ‘ㅂㄱㄱ’는?",
+   "kind": "text",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "DESC",
+   "g": "QUIZ",
+   "name": "설명 듣고 맞히기",
+   "ex": "특징을 듣고 동물·물건·장소 맞히기",
+   "kind": "text",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "HINT",
+   "g": "QUIZ",
+   "name": "단계별 힌트 퀴즈",
+   "ex": "힌트를 하나씩 추가하며 맞히기",
+   "kind": "hint",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "COMMON",
+   "g": "QUIZ",
+   "name": "공통점 찾기",
+   "ex": "세 가지 단어를 듣고 공통점 맞히기",
+   "kind": "text",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "ODD",
+   "g": "QUIZ",
+   "name": "다른 하나 찾기",
+   "ex": "네 가지 단어 중 성격이 다른 하나 고르기",
+   "kind": "qchoice",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "PRICE",
+   "g": "QUIZ",
+   "name": "가격 추측",
+   "ex": "제시된 물건의 가격에 가장 가깝게 답하기",
+   "kind": "number",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "NUMBER",
+   "g": "QUIZ",
+   "name": "숫자 추측",
+   "ex": "특정 동물의 수명이나 건물 높이 추측하기",
+   "kind": "number",
+   "cue": "정답은",
+   "ready": true
+  },
+  {
+   "id": "SONG",
+   "g": "SOUND",
+   "name": "몇 초 듣고 노래 맞히기",
+   "ex": "전주 3초를 듣고 제목 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "SFX",
+   "g": "SOUND",
+   "name": "효과음 맞히기",
+   "ex": "생활 소리·게임 효과음의 정체 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "ANIMAL",
+   "g": "SOUND",
+   "name": "동물 소리 맞히기",
+   "ex": "울음소리를 듣고 동물 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "LINE",
+   "g": "SOUND",
+   "name": "대사 듣고 작품 맞히기",
+   "ex": "영화·드라마·애니메이션 대사로 작품 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "LYRIC",
+   "g": "SOUND",
+   "name": "이상하게 읽은 가사 맞히기",
+   "ex": "가사를 감정 없는 음성으로 듣고 노래 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "INSTR",
+   "g": "SOUND",
+   "name": "악기 소리 맞히기",
+   "ex": "짧은 연주를 듣고 악기 맞히기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "FOREIGN",
+   "g": "SOUND",
+   "name": "외국어 뜻 추측",
+   "ex": "낯선 외국어 표현을 듣고 뜻 고르기",
+   "kind": "sound",
+   "ready": false
+  },
+  {
+   "id": "EXPYN",
+   "g": "EXP",
+   "name": "경험 유무 질문",
+   "ex": "혼자 여행해 본 적 있다 vs 없다",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "MEMORY",
+   "g": "EXP",
+   "name": "추억 꺼내기",
+   "ex": "어릴 때 가장 좋아했던 간식은?",
+   "kind": "open",
+   "cue": "기억에 남는 건",
+   "ready": true
+  },
+  {
+   "id": "BESTWORST",
+   "g": "EXP",
+   "name": "최고·최악의 경험",
+   "ex": "지금까지 먹은 음식 중 가장 기억에 남는 것은?",
+   "kind": "open",
+   "cue": "기억에 남는 건",
+   "ready": true
+  },
+  {
+   "id": "FIRST",
+   "g": "EXP",
+   "name": "처음 경험 이야기",
+   "ex": "처음 번 돈으로 무엇을 샀나요?",
+   "kind": "open",
+   "cue": "우리 이야기는",
+   "ready": true
+  },
+  {
+   "id": "HABIT",
+   "g": "EXP",
+   "name": "나만의 습관 공개",
+   "ex": "남들은 잘 안 하는 나만의 습관은?",
+   "kind": "open",
+   "cue": "우리 이야기는",
+   "ready": true
+  },
+  {
+   "id": "WHATIF",
+   "g": "IMAGINE",
+   "name": "만약에 질문",
+   "ex": "순간이동을 딱 한 번 할 수 있다면 어디로 갈까?",
+   "kind": "open",
+   "cue": "우리 이야기는",
+   "ready": true
+  },
+  {
+   "id": "ISLAND",
+   "g": "IMAGINE",
+   "name": "무인도 물건 고르기",
+   "ex": "제시된 물건 중 세 개만 가져간다면?",
+   "kind": "open",
+   "cue": "우리가 고른 건",
+   "ready": true
+  },
+  {
+   "id": "POWER",
+   "g": "IMAGINE",
+   "name": "초능력 고르기",
+   "ex": "하루 동안 사용할 초능력 하나를 고른다면?",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "BUDGET",
+   "g": "IMAGINE",
+   "name": "가상 예산 배분",
+   "ex": "여행비 100만 원을 어떻게 나눠 쓸까?",
+   "kind": "open",
+   "cue": "우리 배분은",
+   "ready": true
+  },
+  {
+   "id": "SITUATION",
+   "g": "IMAGINE",
+   "name": "가상 상황 대처",
+   "ex": "예약한 숙소가 사라졌다면 가장 먼저 할 일은?",
+   "kind": "open",
+   "cue": "우리 대처는",
+   "ready": true
+  },
+  {
+   "id": "DEBATE",
+   "g": "TALK",
+   "name": "생활 속 찬반 토론",
+   "ex": "여행 계획은 시간 단위로 짜야 할까?",
+   "kind": "open",
+   "cue": "우리 입장은",
+   "ready": true
+  },
+  {
+   "id": "STANDARD",
+   "g": "TALK",
+   "name": "기준 정하기",
+   "ex": "맛집은 최대 몇 분까지 기다릴 수 있을까?",
+   "kind": "open",
+   "cue": "우리 기준은",
+   "ready": true
+  },
+  {
+   "id": "VALUE",
+   "g": "TALK",
+   "name": "가치관 선택",
+   "ex": "일할 때 높은 연봉과 충분한 여가 중 무엇이 중요한가?",
+   "kind": "choice",
+   "cue": "우리 선택은",
+   "ready": true
+  },
+  {
+   "id": "JOINT",
+   "g": "TALK",
+   "name": "가상 공동 결정",
+   "ex": "우리끼리 가게를 연다면 어떤 가게가 좋을까?",
+   "kind": "open",
+   "cue": "우리 결정은",
+   "ready": true
+  },
+  {
+   "id": "LIST",
+   "g": "SPEAK",
+   "name": "카테고리 나열",
+   "ex": "‘감자’가 들어가는 음식 돌아가며 말하기",
+   "kind": "speak",
+   "ready": true
+  },
+  {
+   "id": "TABOO",
+   "g": "SPEAK",
+   "name": "금지어 설명하기",
+   "ex": "‘차갑다·여름’을 쓰지 않고 아이스크림 설명하기",
+   "kind": "speak",
+   "ready": true
+  },
+  {
+   "id": "THREE",
+   "g": "SPEAK",
+   "name": "세 단어로 이야기 만들기",
+   "ex": "우산·우주선·편의점으로 짧은 이야기 만들기",
+   "kind": "speak",
+   "ready": true
+  },
+  {
+   "id": "PITCH",
+   "g": "SPEAK",
+   "name": "가상 상품 홍보하기",
+   "ex": "절대 젖지 않는 양말을 소개해 보기",
+   "kind": "speak",
+   "ready": true
+  },
+  {
+   "id": "CHAIN",
+   "g": "SPEAK",
+   "name": "문장 이어 만들기",
+   "ex": "앱이 제시한 첫 문장 뒤로 한 문장씩 이어가기",
+   "kind": "speak",
+   "ready": true
+  },
+  {
+   "id": "RECALL",
+   "g": "SPEAK",
+   "name": "기억해서 말하기",
+   "ex": "앱이 읽어 준 물건 목록을 기억해서 말하기",
+   "kind": "speak",
+   "ready": true
+  }
+ ]
+}

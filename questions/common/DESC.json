@@ -1,0 +1,54 @@
+{
+ "region": "COMMON",
+ "type": "DESC",
+ "questions": [
+  {
+   "id": "CMN-DESC-001",
+   "type": "DESC",
+   "region": "COMMON",
+   "text": "다리가 네 개고, 등에 혹이 있고, 사막에서 사는 동물은 무엇일까요?",
+   "answers": [
+    "낙타"
+   ],
+   "reveal": "정답은 낙타예요.",
+   "follow": [
+    "동물원에서 제일 좋아하는 동물은요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DESC-002",
+   "type": "DESC",
+   "region": "COMMON",
+   "text": "뜨거운 물을 부어서 먹고, 컵이나 봉지에 들어 있는 음식은 무엇일까요?",
+   "answers": [
+    "라면",
+    "컵라면"
+   ],
+   "reveal": "정답은 라면이에요.",
+   "follow": [
+    "나만의 라면 레시피가 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DESC-003",
+   "type": "DESC",
+   "region": "COMMON",
+   "text": "운전할 때 길을 알려 주고, 목적지까지 남은 시간도 알려 주는 것은 무엇일까요?",
+   "answers": [
+    "내비게이션",
+    "내비",
+    "네비게이션"
+   ],
+   "reveal": "정답은 내비게이션이에요.",
+   "follow": [
+    "내비 덕분에 살았던 기억이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

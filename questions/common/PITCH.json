@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "PITCH",
+ "questions": [
+  {
+   "id": "CMN-PIT-001",
+   "type": "PITCH",
+   "region": "COMMON",
+   "text": "절대 젖지 않는 양말을 홍보해 볼까요? 한 사람씩 한 문장으로요.",
+   "follow": [
+    "이 제품의 가격은 얼마가 좋을까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-PIT-002",
+   "type": "PITCH",
+   "region": "COMMON",
+   "text": "운전할 때 쓰는 ‘졸음 쫓는 껌’을 홍보해 볼까요?",
+   "follow": [
+    "광고 문구를 한 줄로 정리해 볼까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-PIT-003",
+   "type": "PITCH",
+   "region": "COMMON",
+   "text": "밤에도 보이는 우산을 홍보해 볼까요?",
+   "follow": [
+    "어떤 사람이 가장 좋아할까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

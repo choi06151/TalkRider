@@ -1,0 +1,90 @@
+{
+ "region": "COMMON",
+ "type": "RANK",
+ "questions": [
+  {
+   "id": "CMN-RANK-001",
+   "type": "RANK",
+   "region": "COMMON",
+   "text": "여행에서 중요한 순서대로 정해 볼까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "음식"
+    },
+    {
+     "id": "B",
+     "label": "숙소"
+    },
+    {
+     "id": "C",
+     "label": "관광"
+    },
+    {
+     "id": "D",
+     "label": "쇼핑"
+    }
+   ],
+   "follow": [
+    "1순위를 고른 이유를 한 마디씩 말해 볼까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-RANK-002",
+   "type": "RANK",
+   "region": "COMMON",
+   "text": "장거리 이동에서 꼭 필요한 순서를 정해 볼까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "음악"
+    },
+    {
+     "id": "B",
+     "label": "간식"
+    },
+    {
+     "id": "C",
+     "label": "수다"
+    },
+    {
+     "id": "D",
+     "label": "잠깐의 정적"
+    }
+   ],
+   "follow": [
+    "가장 아쉬웠던 때는 언제였나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-RANK-003",
+   "type": "RANK",
+   "region": "COMMON",
+   "text": "친구와 여행할 때 중요한 순서는?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "취향 맞추기"
+    },
+    {
+     "id": "B",
+     "label": "일정 맞추기"
+    },
+    {
+     "id": "C",
+     "label": "예산 맞추기"
+    },
+    {
+     "id": "D",
+     "label": "체력 맞추기"
+    }
+   ],
+   "follow": [
+    "가장 잘 맞았던 부분은 뭐였나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

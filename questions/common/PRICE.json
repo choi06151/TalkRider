@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "PRICE",
+ "questions": [
+  {
+   "id": "CMN-PRC-001",
+   "type": "PRICE",
+   "region": "COMMON",
+   "text": "편의점에서 파는 생수 500밀리리터 한 병은 보통 얼마일까요?",
+   "num": {
+    "value": 1000,
+    "unit": "원",
+    "tol": 30
+   },
+   "hints": [
+    "천 원대예요."
+   ],
+   "follow": [
+    "오늘 쓴 돈 중 가장 아까웠던 건요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-PRC-002",
+   "type": "PRICE",
+   "region": "COMMON",
+   "text": "분식집 김밥 한 줄은 보통 얼마일까요?",
+   "num": {
+    "value": 4000,
+    "unit": "원",
+    "tol": 30
+   },
+   "hints": [
+    "사천 원 근처예요."
+   ],
+   "follow": [
+    "가장 비쌌던 김밥 이야기가 있나요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-PRC-003",
+   "type": "PRICE",
+   "region": "COMMON",
+   "text": "고속도로 휴게소 우동 한 그릇은 보통 얼마일까요?",
+   "num": {
+    "value": 6000,
+    "unit": "원",
+    "tol": 30
+   },
+   "hints": [
+    "육천 원 근처예요."
+   ],
+   "follow": [
+    "휴게소에서 가장 비쌌던 음식은요?"
+   ],
+   "sample": true,
+   "refNote": "샘플 · 출처 확인 전",
+   "status": "DRAFT"
+  }
+ ]
+}

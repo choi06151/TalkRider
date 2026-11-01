@@ -1,0 +1,37 @@
+{
+ "region": "COMMON",
+ "type": "LIST",
+ "questions": [
+  {
+   "id": "CMN-LST-001",
+   "type": "LIST",
+   "region": "COMMON",
+   "text": "‘감자’가 들어가는 음식을 돌아가며 말해 볼까요?",
+   "follow": [
+    "가장 좋아하는 감자 요리는요?"
+   ],
+   "follow0": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-LST-002",
+   "type": "LIST",
+   "region": "COMMON",
+   "text": "‘바다’와 관련된 단어를 돌아가며 말해 볼까요?",
+   "follow": [
+    "가장 좋아하는 바다는 어디인가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-LST-003",
+   "type": "LIST",
+   "region": "COMMON",
+   "text": "‘여행 갈 때 챙기는 것’을 돌아가며 말해 볼까요?",
+   "follow": [
+    "빠뜨려서 곤란했던 물건이 있나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

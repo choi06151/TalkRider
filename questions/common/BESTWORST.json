@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "BESTWORST",
+ "questions": [
+  {
+   "id": "CMN-BW-001",
+   "type": "BESTWORST",
+   "region": "COMMON",
+   "text": "지금까지 먹은 음식 중 가장 기억에 남는 것은 무엇인가요? 최고여도 최악이어도 좋아요.",
+   "follow": [
+    "그 음식을 어디서, 누구와 먹었나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-BW-002",
+   "type": "BESTWORST",
+   "region": "COMMON",
+   "text": "지금까지 다녀온 여행 중 가장 좋았던 순간과 가장 힘들었던 순간을 하나씩 말해 볼까요?",
+   "follow": [
+    "다시 겪어도 괜찮은 순간은 어느 쪽인가요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-BW-003",
+   "type": "BESTWORST",
+   "region": "COMMON",
+   "text": "가장 크게 웃었던 순간을 하나 떠올려 볼까요?",
+   "follow": [
+    "그때 누가 함께 있었나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

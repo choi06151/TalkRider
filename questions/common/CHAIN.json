@@ -1,0 +1,39 @@
+{
+ "region": "COMMON",
+ "type": "CHAIN",
+ "questions": [
+  {
+   "id": "CMN-CHN-001",
+   "type": "CHAIN",
+   "region": "COMMON",
+   "text": "제가 첫 문장을 말할게요. 한 사람씩 한 문장씩 이어 보세요.",
+   "follow": [
+    "이야기의 제목을 지어 볼까요?"
+   ],
+   "start": "어느 날 아침, 우리 차 뒷좌석에서 이상한 소리가 났어요.",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-CHN-002",
+   "type": "CHAIN",
+   "region": "COMMON",
+   "text": "제가 첫 문장을 말할게요. 한 사람씩 한 문장씩 이어 보세요.",
+   "follow": [
+    "이야기의 결말은 어떻게 될까요?"
+   ],
+   "start": "휴게소에서 산 호두과자 상자 안에는 작은 편지가 들어 있었어요.",
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-CHN-003",
+   "type": "CHAIN",
+   "region": "COMMON",
+   "text": "제가 첫 문장을 말할게요. 한 사람씩 한 문장씩 이어 보세요.",
+   "follow": [
+    "가장 웃겼던 문장은 무엇이었나요?"
+   ],
+   "start": "내비게이션이 갑자기 이렇게 말했어요. 다음 목적지는 달입니다.",
+   "status": "DRAFT"
+  }
+ ]
+}

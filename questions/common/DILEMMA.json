@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "DILEMMA",
+ "questions": [
+  {
+   "id": "CMN-DIL-001",
+   "type": "DILEMMA",
+   "region": "COMMON",
+   "text": "맛은 최고지만 불친절한 식당과, 평범하지만 친절한 식당 중 어디로 갈까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "맛은 최고, 불친절"
+    },
+    {
+     "id": "B",
+     "label": "평범한 맛, 친절"
+    }
+   ],
+   "follow": [
+    "그런 식당을 실제로 가본 적이 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DIL-002",
+   "type": "DILEMMA",
+   "region": "COMMON",
+   "text": "경치는 멋지지만 한 시간 더 걸리는 길과, 평범하지만 빠른 길 중에서는?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "멋진 길, 1시간 더"
+    },
+    {
+     "id": "B",
+     "label": "평범한 길, 빠르게"
+    }
+   ],
+   "follow": [
+    "가장 멋졌던 드라이브 길은 어디였나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DIL-003",
+   "type": "DILEMMA",
+   "region": "COMMON",
+   "text": "비밀을 알려 주는 친구와 늘 솔직한 친구 중 어느 쪽이 더 소중한가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "비밀을 지켜 주는 친구"
+    },
+    {
+     "id": "B",
+     "label": "늘 솔직한 친구"
+    }
+   ],
+   "follow": [
+    "그런 친구에게 고마웠던 순간이 있나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

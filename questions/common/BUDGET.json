@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "BUDGET",
+ "questions": [
+  {
+   "id": "CMN-BUD-001",
+   "type": "BUDGET",
+   "region": "COMMON",
+   "text": "여행비 100만 원을 어떻게 나눠 쓸까요? 숙소, 음식, 체험, 기념품에 얼마씩 쓸지 이야기해 볼까요?",
+   "follow": [
+    "가장 아깝지 않은 지출은 어디일까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-BUD-002",
+   "type": "BUDGET",
+   "region": "COMMON",
+   "text": "복권 10만 원에 당첨됐어요. 오늘 안에 다 쓴다면 어떻게 쓸까요?",
+   "follow": [
+    "남기는 돈이 있다면 얼마일까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-BUD-003",
+   "type": "BUDGET",
+   "region": "COMMON",
+   "text": "친구들과 1박 2일에 50만 원이라면 어떻게 나눠 쓸까요?",
+   "follow": [
+    "절대 줄일 수 없는 항목은 뭘까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

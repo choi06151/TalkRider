@@ -1,0 +1,36 @@
+{
+ "region": "COMMON",
+ "type": "FIRST",
+ "questions": [
+  {
+   "id": "CMN-FST-001",
+   "type": "FIRST",
+   "region": "COMMON",
+   "text": "처음 번 돈으로 무엇을 샀나요?",
+   "follow": [
+    "그 물건은 지금도 가지고 있나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-FST-002",
+   "type": "FIRST",
+   "region": "COMMON",
+   "text": "처음으로 혼자 멀리 가 본 날을 기억하나요?",
+   "follow": [
+    "그날 가장 긴장했던 순간은요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-FST-003",
+   "type": "FIRST",
+   "region": "COMMON",
+   "text": "처음 운전대를 잡았던 날, 또는 처음 차를 타고 멀리 갔던 날은 어땠나요?",
+   "follow": [
+    "그때와 지금, 가장 달라진 점은요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

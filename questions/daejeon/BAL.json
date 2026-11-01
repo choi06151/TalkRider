@@ -1,0 +1,53 @@
+{
+ "region": "DAEJEON",
+ "type": "BAL",
+ "questions": [
+  {
+   "id": "DAEJEON-BAL-001",
+   "type": "BAL",
+   "region": "DAEJEON",
+   "text": "대전에 도착해서 성심당에서 딱 하나만 살 수 있다면, 튀김소보로와 부추빵 중 무엇인가요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "튀김소보로"
+    },
+    {
+     "id": "B",
+     "label": "부추빵"
+    }
+   ],
+   "follow": [
+    "두 번째로 사고 싶은 빵도 말해볼까요?"
+   ],
+   "tags": [
+    "대전",
+    "성심당"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "DAEJEON-BAL-002",
+   "type": "BAL",
+   "region": "DAEJEON",
+   "text": "대전에서 점심으로 칼국수와 두부두루치기 중 하나를 고른다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "칼국수"
+    },
+    {
+     "id": "B",
+     "label": "두부두루치기"
+    }
+   ],
+   "follow": [
+    "다른 지역에서 먹어본 비슷한 음식이 있나요?"
+   ],
+   "tags": [
+    "대전"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

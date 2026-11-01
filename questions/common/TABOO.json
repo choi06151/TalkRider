@@ -1,0 +1,48 @@
+{
+ "region": "COMMON",
+ "type": "TABOO",
+ "questions": [
+  {
+   "id": "CMN-TAB-001",
+   "type": "TABOO",
+   "region": "COMMON",
+   "text": "‘차갑다’와 ‘여름’이라는 말을 쓰지 않고 아이스크림을 설명해 볼까요? 맞히는 사람은 나머지 모두예요.",
+   "follow": [
+    "가장 설명하기 어려웠던 건 뭐였나요?"
+   ],
+   "items": [
+    "차갑다",
+    "여름"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TAB-002",
+   "type": "TABOO",
+   "region": "COMMON",
+   "text": "‘바퀴’와 ‘운전’이라는 말을 쓰지 않고 자동차를 설명해 볼까요?",
+   "follow": [
+    "설명이 가장 재미있었던 사람은 누구인가요?"
+   ],
+   "items": [
+    "바퀴",
+    "운전"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-TAB-003",
+   "type": "TABOO",
+   "region": "COMMON",
+   "text": "‘따뜻하다’와 ‘겨울’이라는 말을 쓰지 않고 붕어빵을 설명해 볼까요?",
+   "follow": [
+    "겨울 간식 중 최고는 뭘까요?"
+   ],
+   "items": [
+    "따뜻하다",
+    "겨울"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

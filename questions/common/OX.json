@@ -1,0 +1,98 @@
+{
+ "region": "COMMON",
+ "type": "OX",
+ "questions": [
+  {
+   "id": "CMN-OX-001",
+   "type": "OX",
+   "region": "COMMON",
+   "text": "바나나는 나무가 아니라 풀에 가깝다. 맞을까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "O"
+    },
+    {
+     "id": "B",
+     "label": "X"
+    }
+   ],
+   "answer": "A",
+   "reveal": "바나나는 나무처럼 보이지만 사실은 커다란 풀(초본)이에요.",
+   "follow": [
+    "또 놀랐던 상식이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-OX-002",
+   "type": "OX",
+   "region": "COMMON",
+   "text": "번개는 같은 곳에 두 번 칠 수 없다. 맞을까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "O"
+    },
+    {
+     "id": "B",
+     "label": "X"
+    }
+   ],
+   "answer": "B",
+   "reveal": "같은 곳에 여러 번 칠 수 있어요. 높은 건물에는 자주 쳐요.",
+   "follow": [
+    "번개 치던 날의 기억이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-OX-003",
+   "type": "OX",
+   "region": "COMMON",
+   "text": "문어의 심장은 세 개다. 맞을까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "O"
+    },
+    {
+     "id": "B",
+     "label": "X"
+    }
+   ],
+   "answer": "A",
+   "reveal": "문어는 심장이 세 개예요.",
+   "follow": [
+    "신기했던 동물 이야기를 하나 말해 볼까요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-OX-004",
+   "type": "OX",
+   "region": "COMMON",
+   "text": "금붕어의 기억력은 3초뿐이다. 맞을까요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "O"
+    },
+    {
+     "id": "B",
+     "label": "X"
+    }
+   ],
+   "answer": "B",
+   "reveal": "금붕어는 몇 달 동안도 기억해요.",
+   "follow": [
+    "키워 본 동물이 있나요?"
+   ],
+   "sample": true,
+   "status": "DRAFT"
+  }
+ ]
+}

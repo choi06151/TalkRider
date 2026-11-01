@@ -1,0 +1,78 @@
+{
+ "region": "COMMON",
+ "type": "DROP1",
+ "questions": [
+  {
+   "id": "CMN-DROP-001",
+   "type": "DROP1",
+   "region": "COMMON",
+   "text": "모기, 바퀴벌레, 파리 중 하나를 세상에서 없앨 수 있다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "모기"
+    },
+    {
+     "id": "B",
+     "label": "바퀴벌레"
+    },
+    {
+     "id": "C",
+     "label": "파리"
+    }
+   ],
+   "follow": [
+    "가장 괴로웠던 만남은 언제였나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DROP-002",
+   "type": "DROP1",
+   "region": "COMMON",
+   "text": "월요일, 일요일 저녁, 알람 소리 중 하나를 없앨 수 있다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "월요일"
+    },
+    {
+     "id": "B",
+     "label": "일요일 저녁"
+    },
+    {
+     "id": "C",
+     "label": "알람 소리"
+    }
+   ],
+   "follow": [
+    "그걸 없애면 가장 먼저 뭘 하고 싶나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-DROP-003",
+   "type": "DROP1",
+   "region": "COMMON",
+   "text": "여행 중 정체 구간, 주차 전쟁, 졸음 중 하나를 없앨 수 있다면요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "정체 구간"
+    },
+    {
+     "id": "B",
+     "label": "주차 전쟁"
+    },
+    {
+     "id": "C",
+     "label": "졸음"
+    }
+   ],
+   "follow": [
+    "가장 오래 막혔던 날은 언제였나요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

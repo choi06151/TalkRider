@@ -1,0 +1,66 @@
+{
+ "region": "COMMON",
+ "type": "EXPYN",
+ "questions": [
+  {
+   "id": "CMN-EXY-001",
+   "type": "EXPYN",
+   "region": "COMMON",
+   "text": "혼자 여행을 가 본 적이 있나요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "있다"
+    },
+    {
+     "id": "B",
+     "label": "없다"
+    }
+   ],
+   "follow": [
+    "어디였는지, 어땠는지 말해 볼까요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EXY-002",
+   "type": "EXPYN",
+   "region": "COMMON",
+   "text": "밤새 이동해 본 적이 있나요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "있다"
+    },
+    {
+     "id": "B",
+     "label": "없다"
+    }
+   ],
+   "follow": [
+    "그때 가장 힘들었던 건 뭐였나요?"
+   ],
+   "status": "DRAFT"
+  },
+  {
+   "id": "CMN-EXY-003",
+   "type": "EXPYN",
+   "region": "COMMON",
+   "text": "여행 가서 길을 잃어 본 적이 있나요?",
+   "choices": [
+    {
+     "id": "A",
+     "label": "있다"
+    },
+    {
+     "id": "B",
+     "label": "없다"
+    }
+   ],
+   "follow": [
+    "어떻게 해결했는지 말해 볼까요?"
+   ],
+   "status": "DRAFT"
+  }
+ ]
+}

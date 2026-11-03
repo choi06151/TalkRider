@@ -69,31 +69,31 @@ h1, h2, h3 { font-family: var(--f-disp); font-weight: 400; margin: 0; text-wrap:
 .field { font: inherit; font-size: 20px; padding: 12px 16px; border: 3px solid var(--line); border-radius: 14px; background: var(--card2); color: var(--ink); min-height: 52px; width: 100%; }
 
 /* home */
-.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; align-items: stretch; }
-.mode-btns { display: grid; gap: 14px; }
-.mode { text-align: left; cursor: pointer; border: 3px solid var(--line); border-radius: 24px; padding: 20px 22px; box-shadow: 0 6px 0 var(--line); display: grid; gap: 4px; transition: transform .08s, box-shadow .08s; }
-.mode:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--line); }
-.mode.rec { background: var(--sun); color: #12303f; } .mode.free { background: var(--sea); color: #fff; }
-.mode h2 { font-size: 34px; } .mode p { margin: 0; font-size: 17px; opacity: .92; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: stretch; }
+.veh .vstate { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; margin: 6px 0 2px; }
+.veh .vdot { width: 14px; height: 14px; border-radius: 50%; background: var(--ink-soft); flex: none; }
+.veh.on .vdot { background: var(--mint); box-shadow: 0 0 0 4px color-mix(in srgb, var(--mint) 30%, transparent); }
+.veh .vval { font-family: var(--f-disp); font-size: 24px; }
 .lockbar { background: color-mix(in srgb, var(--coral) 18%, var(--card)); border: 3px solid var(--coral); border-radius: 16px; padding: 10px 16px; font-weight: 700; }
 body.drive .needs-parked { pointer-events: none; opacity: .45; }
 
-/* plan */
-.timeline { display: grid; gap: 10px; }
-.phase { font-family: var(--f-disp); font-size: 18px; color: var(--ink-soft); margin-top: 6px; }
-.item { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; background: var(--card); border: 3px solid var(--line); border-left-width: 12px; border-radius: 16px; padding: 10px 14px; }
-.item .t { font-family: var(--f-disp); font-size: 22px; } .item .e { font-size: 15px; color: var(--ink-soft); }
-.item .min { font-family: var(--f-disp); font-size: 18px; color: var(--ink-soft); white-space: nowrap; }
-.item.quiet { background: color-mix(in srgb, var(--grape) 14%, var(--card)); }
-.item .acts { display: flex; gap: 6px; }
-
-/* free / catalog */
+/* free mode / catalog */
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-.tcard { text-align: left; background: var(--card); border: 3px solid var(--line); border-top-width: 10px; border-radius: 18px; padding: 12px 16px; cursor: pointer; box-shadow: 0 5px 0 var(--shadow); display: grid; gap: 4px; }
+/* 유형 캐러셀: 가로로 좁고 세로로 긴 카드를 옆으로 밀어서 넘긴다 */
+.free-head { display: flex; align-items: center; gap: 12px; }
+.free-head h2 { font-size: 28px; }
+.carousel { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 4px; padding: 6px 4px 18px; -webkit-overflow-scrolling: touch; scrollbar-width: thin; cursor: grab; touch-action: pan-x; }
+.carousel.drag { cursor: grabbing; scroll-snap-type: none; }
+.tcard { flex: 0 0 196px; height: 340px; scroll-snap-align: start; text-align: center; background: var(--card); border: 3px solid var(--line); border-radius: 26px; padding: 18px 16px 20px; cursor: pointer; box-shadow: 0 6px 0 var(--shadow); display: grid; grid-template-rows: auto auto 1fr auto; justify-items: center; gap: 12px; user-select: none; -webkit-user-select: none; }
 .tcard:active { transform: translateY(3px); }
-.tcard .t { font-family: var(--f-disp); font-size: 22px; } .tcard .e { font-size: 15px; color: var(--ink-soft); }
+.tcard .ico { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; font-size: 60px; line-height: 1; border: 3px solid var(--line); overflow: hidden; }
+.tcard .ico img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.tcard .t { font-family: var(--f-disp); font-size: 23px; line-height: 1.25; }
+.tcard .e { font-size: 16px; color: var(--ink-soft); line-height: 1.4; align-self: start; }
 .tcard[disabled] { opacity: .5; cursor: not-allowed; }
+.tcard .badge { justify-self: center; }
+.swipe-hint { color: var(--ink-soft); font-size: 15px; margin: 0; }
+.start-big { font-size: 34px; padding: 22px 28px; }
 .badge { justify-self: start; font-family: var(--f-disp); font-size: 14px; padding: 1px 10px; border-radius: 999px; background: var(--card2); border: 2px solid var(--line); }
 
 /* talk */
@@ -153,10 +153,9 @@ pre.log { background: var(--card2); padding: 10px; border-radius: 12px; font-siz
   body { font-size: 17px; }
   .hero { grid-template-columns: 1fr; }
   .item { grid-template-columns: auto 1fr; } .item .acts { grid-column: 1 / -1; }
-  .grid { grid-template-columns: 1fr 1fr; }
   .field-row > label { min-width: 100%; }
 }
-@media (max-width: 480px) { .grid { grid-template-columns: 1fr; } .btn { font-size: 20px; padding: 10px 16px; } .stepper .num { font-size: 34px; } }
+@media (max-width: 480px) { .btn { font-size: 20px; padding: 10px 16px; } .stepper .num { font-size: 34px; } }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 </style>
 </head>
@@ -169,40 +168,39 @@ pre.log { background: var(--card2); padding: 10px; border-radius: 12px; font-siz
     <button class="btn sm ghost" id="btn-set">설정</button>
   </header>
 
-  <!-- 홈 -->
+  <!-- 홈 (자유 모드) -->
   <section class="screen active" id="s-home">
-    <div class="lockbar drive-only">주행 중에는 화면 조작을 제한해요. 정차 후 설정하거나 “추천 시작”이라고 말해 주세요.</div>
+    <div class="lockbar drive-only">주행 중에는 화면 조작을 제한해요. 정차 후 “시작하기”를 누르거나 “시작”이라고 말해 주세요.</div>
     <div class="hero">
       <div class="panel needs-parked">
         <h2>오늘의 동승</h2>
         <p class="sub" style="margin:0">화면 대신 말로 즐기는 대화 앱이에요. 동승자 구성만 알려 주세요.</p>
         <div class="field-row"><label>인원</label><span class="stepper"><button class="btn sm" id="p-minus" aria-label="인원 줄이기">−</button><span class="num" id="p-num">3</span><button class="btn sm" id="p-plus" aria-label="인원 늘리기">＋</button></span><span class="sub">명 (2~5명)</span></div>
         <div class="field-row"><label>관계</label><span class="chips" id="rel-chips"><button class="chip" data-r="FRIENDS">친구</button><button class="chip" data-r="COUPLE">연인</button><button class="chip" data-r="FAMILY">가족</button></span></div>
-        <div class="field-row"><label>목적지</label><select class="field" id="dest" style="max-width:260px"><option value="">정하지 않음</option><option value="DAEJEON">대전</option><option value="BUSAN">부산</option><option value="JEONJU">전주</option></select></div>
-        <div class="field-row"><label>남은 시간</label><span class="chips" id="remain-chips"><button class="chip" data-m="30">30분</button><button class="chip" data-m="60">1시간</button><button class="chip" data-m="120">2시간</button><button class="chip" data-m="180">3시간+</button></span></div>
-        <p class="sub" style="margin:10px 0 0">※ 내비 연동 전에는 목적지·남은 시간을 직접 입력해요. 연동되면 자동으로 채워져요.</p>
       </div>
-      <div class="mode-btns">
-        <button class="mode rec" id="m-rec"><h2>추천 모드</h2><p>목적지와 남은 시간에 맞춰 오늘의 대화 코스를 짜 드려요. 조용한 시간도 함께 넣어요.</p></button>
-        <button class="mode free needs-parked" id="m-free"><h2>자유 모드</h2><p>45가지 유형 중 원하는 놀이를 직접 골라요.</p></button>
+      <div class="panel veh" id="veh" aria-live="polite">
+        <h2>차량 연동</h2>
+        <div class="vstate"><span class="vdot"></span><span id="veh-state">차량 연결 확인 중…</span></div>
+        <div class="field-row"><label>목적지</label><span class="vval" id="veh-dest">-</span></div>
+        <div class="field-row"><label>남은 시간</label><span class="vval" id="veh-remain">-</span></div>
+        <p class="sub" style="margin:10px 0 0">내비게이션 정보를 차량에서 자동으로 받아와요. 직접 입력하지 않아도 돼요.</p>
       </div>
     </div>
+    <button class="btn mint start-big needs-parked" id="go-start">시작하기</button>
   </section>
 
-  <!-- 추천 코스 -->
-  <section class="screen" id="s-plan">
-    <div class="lockbar drive-only">주행 중에는 “추천 시작” 또는 “시작”이라고 말하면 바로 시작해요.</div>
-    <div class="panel"><h2 id="plan-title">오늘의 추천 코스</h2><p class="sub" id="plan-sub" style="margin:0"></p></div>
-    <div class="timeline needs-parked" id="timeline"></div>
-    <div class="controls"><button class="btn mint" id="plan-start">코스 시작</button><button class="btn needs-parked" id="plan-redo">다시 짜기</button><button class="btn ghost needs-parked" id="plan-back">뒤로</button></div>
-  </section>
-
-  <!-- 자유 모드 -->
+  <!-- 자유 모드: 놀이 고르기 -->
   <section class="screen" id="s-free">
-    <div class="panel"><h2>자유 모드</h2><p class="sub" style="margin:0">하고 싶은 놀이를 고르면 바로 시작해요. 끝내고 싶을 때 “그만”이라고 말해요.</p></div>
-    <div class="tabs" id="free-tabs"></div>
-    <div class="grid" id="free-grid"></div>
-    <div class="controls"><button class="btn sun" id="free-any">아무거나 시작</button><button class="btn ghost" id="free-back">뒤로</button></div>
+    <div class="lockbar drive-only">주행 중에는 “시작”이라고 말하면 아무 놀이나 바로 시작해요.</div>
+    <div class="free-head">
+      <button class="btn sm ghost needs-parked" id="free-back">← 처음으로</button>
+      <h2>자유 모드</h2>
+    </div>
+    <p class="sub" id="free-sub" style="margin:0"></p>
+    <div class="tabs needs-parked" id="free-tabs"></div>
+    <p class="swipe-hint needs-parked" id="free-desc"></p>
+    <div class="carousel needs-parked" id="free-grid" role="list" aria-label="놀이 유형"></div>
+    <div class="controls needs-parked"><button class="btn sun" id="free-any">아무거나 시작</button></div>
   </section>
 
   <!-- 대화 -->
@@ -245,7 +243,7 @@ pre.log { background: var(--card2); padding: 10px; border-radius: 12px; font-siz
     <div class="panel"><h2>오늘의 대화 기록</h2><p class="sub" id="wrap-sub" style="margin:0"></p></div>
     <div class="panel"><h3 style="font-size:22px;margin-bottom:8px">우리가 나눈 이야기</h3><div class="rec-list" id="wrap-list"></div></div>
     <div class="panel"><h3 style="font-size:22px;margin-bottom:8px">오늘 대화는 어땠나요?</h3><div class="rate" id="rate"><button class="chip" data-v="2">좋았어요</button><button class="chip" data-v="1">보통이에요</button><button class="chip" data-v="0">별로였어요</button></div></div>
-    <div class="controls"><button class="btn mint" id="wrap-new">새 코스 만들기</button><button class="btn" id="wrap-home">홈으로</button></div>
+    <div class="controls"><button class="btn mint" id="wrap-new">다른 놀이 하기</button></div>
   </section>
 </div>
 
@@ -256,7 +254,6 @@ pre.log { background: var(--card2); padding: 10px; border-radius: 12px; font-siz
     <div class="row"><span>음성 인식</span><button class="sw" id="sw-voice" aria-pressed="true" aria-label="음성 인식"></button></div>
     <div class="row"><span>효과음</span><button class="sw" id="sw-sfx" aria-pressed="true" aria-label="효과음"></button></div>
     <div class="row"><span>음량</span><input type="range" id="vol" min="0" max="1" step="0.1" value="0.8" aria-label="음량"></div>
-    <div class="row"><span>조용한 시간 넣기 (추천 모드)</span><button class="sw" id="sw-quiet" aria-pressed="true" aria-label="조용한 시간 넣기"></button></div>
     <div class="row"><span>측정 기록 (이 기기에만 저장)</span><button class="btn sm" id="log-show">보기</button></div>
     <pre class="log" id="log-pre" hidden></pre>
     <div class="row"><button class="btn sm ghost" id="log-clear">기록 모두 지우기</button><button class="btn sea" id="set-close">닫기</button></div>
@@ -555,7 +552,7 @@ var REL_LABEL = { FRIENDS: '친구', COUPLE: '연인', FAMILY: '가족' };
 var store = {
   key: 'car_playground_v1',
   data: null,
-  fresh: function () { return { people: 3, rel: 'FRIENDS', dest: '', remain: 60, quiet: true, settings: { tts: true, voice: true, sfx: true, volume: 0.8 }, recent: [], album: [], log: [] }; },
+  fresh: function () { return { people: 3, rel: 'FRIENDS', dest: '', remain: null, settings: { tts: true, voice: true, sfx: true, volume: 0.8 }, recent: [], album: [], log: [] }; },
   load: function () {
     var d = null; try { d = JSON.parse(localStorage.getItem(this.key) || 'null'); } catch (e) { d = null; }
     var f = this.fresh(); if (d) { for (var k in f) if (d[k] == null) d[k] = f[k]; for (var s in f.settings) if (d.settings[s] == null) d.settings[s] = f.settings[s]; }
@@ -669,7 +666,7 @@ function parseCommand(t) {
   if (/(그만|종료|끝내|끝낼|멈춰|스톱)/.test(s)) return 'stop';
   if (/(조용히|쉬어|쉴래|쉬자|쉬고싶)/.test(s)) return 'quiet';
   if (/(계속|이어서|이어가)/.test(s)) return 'cont';
-  if (/(추천시작|^시작)/.test(s)) return 'start';
+  if (/(^시작|아무거나)/.test(s)) return 'start';
   if (/(다음|넘어가|패스|건너뛰|스킵)/.test(s)) return 'next';
   if (/(다시|한번더)/.test(s)) return 'repeat';
   if (/(힌트)/.test(s)) return 'hint';
@@ -698,14 +695,43 @@ function pickQuestion(type, used) {
 }
 function remember(id) { var r = (store.data.recent || []).concat([id]); store.data.recent = r.slice(-60); store.save(); }
 
-/* ---------- recommend plan ---------- */
-var COST = { choice: 3, predict: 4, qchoice: 3, text: 3, hint: 4, number: 4, rank: 4, open: 5, speak: 5 };
+/* ---------- vehicle API (mock) ----------
+   목적지·남은 시간은 사용자가 입력하지 않고 차량(내비) API에서 자동으로 받는다.
+   지금은 시연용 모의 데이터이며, 실제 연동 때는 이 모듈 안쪽(connect/poll)만
+   Pleos Connect / 내비 API 호출로 바꾸면 나머지 화면 코드는 그대로 쓴다. */
+var REGION_BY_NAME = { '대전': 'DAEJEON', '부산': 'BUSAN', '전주': 'JEONJU' };
+var Vehicle = (function () {
+  var listeners = [], info = { connected: false, destName: '', region: '', remainMin: null };
+  var mock = { destName: '대전', remainMin: 72 };
+  function regionOf(name) { for (var k in REGION_BY_NAME) if (name && name.indexOf(k) >= 0) return REGION_BY_NAME[k]; return ''; }
+  function publish(next) { info = next; listeners.forEach(function (fn) { fn(info); }); }
+  function poll() { // 모의: 1분마다 1분씩 줄고, 도착하면 목적지가 사라진다
+    if (mock.destName && mock.remainMin > 0) mock.remainMin--;
+    if (mock.destName && mock.remainMin <= 0) { mock.destName = ''; mock.remainMin = null; }
+    publish({ connected: true, destName: mock.destName, region: regionOf(mock.destName), remainMin: mock.remainMin });
+  }
+  return {
+    get: function () { return info; },
+    subscribe: function (fn) { listeners.push(fn); fn(info); },
+    start: function () { setTimeout(poll0, 900); setInterval(poll, 60000); function poll0() { publish({ connected: true, destName: mock.destName, region: regionOf(mock.destName), remainMin: mock.remainMin }); } }
+  };
+})();
+function fmtRemain(m) { if (m == null) return '-'; if (m < 60) return '약 ' + m + '분'; var h2 = Math.floor(m / 60), r = m % 60; return '약 ' + h2 + '시간' + (r ? ' ' + r + '분' : ''); }
+function renderVehicle() {
+  var v = Vehicle.get(), box = $('#veh');
+  box.classList.toggle('on', v.connected);
+  $('#veh-state').textContent = !v.connected ? '차량 연결 확인 중…' : (v.destName ? '차량 연결됨 · 내비 안내 중' : '차량 연결됨 · 목적지 없음');
+  $('#veh-dest').textContent = v.connected ? (v.destName || '설정 안 됨') : '-';
+  $('#veh-remain').textContent = v.destName ? fmtRemain(v.remainMin) : '-';
+}
+Vehicle.subscribe(function (v) { store.data.dest = v.region || ''; store.data.remain = v.remainMin; if ($('#veh')) renderVehicle(); });
+
+/* ---------- type weighting ("아무거나" 시작용) ---------- */
 var PH = {
   A: ['BAL', 'TASTE', 'EXPYN', 'OX', 'KEEP1', 'DILEMMA', 'COND', 'DROP1', 'TRIVIA', 'NONSENSE', 'CHOSUNG'],
   B: ['BALP', 'MCQ', 'HINT', 'COMMON', 'ODD', 'PRICE', 'NUMBER', 'DESC', 'DEBATE', 'STANDARD', 'VALUE', 'JOINT', 'WHATIF', 'ISLAND', 'POWER', 'BUDGET', 'SITUATION', 'LIST', 'TABOO', 'THREE', 'PITCH', 'CHAIN', 'RECALL', 'RANK'],
   C: ['MEMORY', 'FIRST', 'BESTWORST', 'HABIT', 'WHATIF', 'EXPYN']
 };
-var PHASE_NAME = { A: '출발 · 가볍게 시작해요', B: '이동 중 · 본격적으로 이야기해요', C: '도착 전 · 여운을 남겨요' };
 var REL_W = { FRIENDS: { CHOICE: 3, QUIZ: 3, EXP: 2, IMAGINE: 2, TALK: 2, SPEAK: 3 }, COUPLE: { CHOICE: 3, QUIZ: 1, EXP: 3, IMAGINE: 3, TALK: 3, SPEAK: 1 }, FAMILY: { CHOICE: 3, QUIZ: 3, EXP: 3, IMAGINE: 2, TALK: 1, SPEAK: 2 } };
 function weightedType(list, usedTypes, lastGroup) {
   var w = REL_W[store.data.rel], bag = [];
@@ -716,62 +742,14 @@ function weightedType(list, usedTypes, lastGroup) {
   });
   return bag.length ? rnd(bag) : null;
 }
-function makePlan() {
-  var d = store.data, total = d.remain, quiet = d.quiet;
-  var qn = quiet ? Math.max(1, Math.min(3, Math.floor(total / 45))) : 0, qmin = 3;
-  var content = Math.max(10, total - qn * qmin);
-  var budget = { A: content * .25, B: content * .55, C: content * .2 };
-  var items = [], used = [], usedTypes = [], lastGroup = null;
-  var phases = total <= 30 ? ['A', 'B', 'C'] : ['A', 'B', 'C'];
-  var byPhase = { A: [], B: [], C: [] };
-  phases.forEach(function (ph) {
-    var left = budget[ph], guard = 0;
-    // 목적지 지역 문항 1개를 시작과 끝에 우선 배치
-    if (d.dest && (ph === 'A' || ph === 'C')) {
-      var rt = shuffle(PH[ph]).filter(function (id) { return QUESTIONS.some(function (q) { return q.type === id && q.region === d.dest && audOk(q); }); })[0];
-      if (rt) { var rq = pickRegional(rt, d.dest, used); if (rq) { byPhase[ph].push({ type: rt, q: rq, min: COST[typeOf(rt).kind] || 3 }); used.push(rq.id); usedTypes.push(rt); left -= COST[typeOf(rt).kind] || 3; lastGroup = typeOf(rt).g; } }
-    }
-    while (left > 0 && guard++ < 40) {
-      var id = weightedType(PH[ph], usedTypes, lastGroup); if (!id) { usedTypes = usedTypes.filter(function (x) { return PH[ph].indexOf(x) < 0; }); id = weightedType(PH[ph], usedTypes, lastGroup); if (!id) break; }
-      var q = pickQuestion(id, used); if (!q) { usedTypes.push(id); continue; }
-      var cost = COST[typeOf(id).kind] || 3;
-      if (byPhase[ph].length && left < cost / 2) break;
-      byPhase[ph].push({ type: id, q: q, min: cost }); used.push(q.id); usedTypes.push(id); lastGroup = typeOf(id).g; left -= cost;
-    }
-  });
-  var A = byPhase.A, B = byPhase.B, C = byPhase.C;
-  function Q() { return { quiet: true, min: qmin }; }
-  var out = [];
-  if (qn === 0) out = A.concat(B, C);
-  else if (qn === 1) { var mid = Math.ceil(B.length / 2); out = A.concat(B.slice(0, mid), [Q()], B.slice(mid), C); }
-  else if (qn === 2) out = A.concat([Q()], B, [Q()], C);
-  else { var m3 = Math.ceil(B.length / 2); out = A.concat([Q()], B.slice(0, m3), [Q()], B.slice(m3), [Q()], C); }
-  items = out;
-  var marks = []; var idx = 0; A.forEach(function () { }); // phase labels derived below
-  return { items: items, phases: { A: A.length, B: B.length, C: C.length }, quietCount: qn };
-}
-function pickRegional(type, dest, used) {
-  var pool = QUESTIONS.filter(function (q) { return q.type === type && q.region === dest && audOk(q) && used.indexOf(q.id) < 0; });
-  return pool.length ? cloneAs(rnd(pool), type) : null;
-}
-function phaseOfIndex(plan) {
-  // phase tag for each item: quiet items inherit boundary
-  var tags = [], a = plan.phases.A, b = plan.phases.B, seenA = 0, seenB = 0, seenC = 0;
-  plan.items.forEach(function (it) {
-    if (it.quiet) { tags.push('Q'); return; }
-    if (seenA < a) { seenA++; tags.push('A'); } else if (seenB < b) { seenB++; tags.push('B'); } else { seenC++; tags.push('C'); }
-  });
-  return tags;
-}
-
 /* ---------- navigation ---------- */
-var screenName = 'home', S = null, PLAN = null;
+var screenName = 'home', S = null;
 function show(name) {
   screenName = name;
   $$('.screen').forEach(function (s) { s.classList.toggle('active', s.id === 's-' + name); });
   window.scrollTo(0, 0);
   Voice.cancel();
-  if (name === 'home' || name === 'plan') { if (drive) Mic.start(route); else Mic.stop(); }
+  if (name === 'home' || name === 'free') { if (drive) Mic.start(route); else Mic.stop(); }
   else if (name === 'talk') { /* mic started by step loader */ }
   else if (name === 'quiet') { if (drive) Mic.start(route); else Mic.stop(); }
   else Mic.stop();
@@ -780,8 +758,8 @@ function route(text) {
   var cmd = parseCommand(text);
   if (screenName === 'talk') { handleUtter(text, false); return; }
   if (screenName === 'quiet') { if (cmd === 'cont' || cmd === 'next') resumeFromQuiet(); else if (cmd === 'stop') endSession(); return; }
-  if (screenName === 'home' && cmd === 'start') { buildPlan(); startPlan(); return; }
-  if (screenName === 'plan' && cmd === 'start') { startPlan(); }
+  if (screenName === 'home' && cmd === 'start') { openFree(); return; }
+  if (screenName === 'free' && cmd === 'start') { startFree('ANY'); }
 }
 
 /* ---------- home ---------- */
@@ -789,87 +767,58 @@ function renderHome() {
   var d = store.data;
   $('#p-num').textContent = d.people;
   $$('#rel-chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-r') === d.rel)); });
-  $$('#remain-chips .chip').forEach(function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-m') === d.remain)); });
-  $('#dest').value = d.dest;
+  renderVehicle();
 }
 $('#p-minus').addEventListener('click', function () { var d = store.data; d.people = Math.max(2, d.people - 1); store.save(); renderHome(); SFX.tap(); });
 $('#p-plus').addEventListener('click', function () { var d = store.data; d.people = Math.min(5, d.people + 1); store.save(); renderHome(); SFX.tap(); });
 $$('#rel-chips .chip').forEach(function (b) { b.addEventListener('click', function () { store.data.rel = b.getAttribute('data-r'); store.save(); renderHome(); SFX.tap(); }); });
-$$('#remain-chips .chip').forEach(function (b) { b.addEventListener('click', function () { store.data.remain = +b.getAttribute('data-m'); store.save(); renderHome(); SFX.tap(); }); });
-$('#dest').addEventListener('change', function () { store.data.dest = this.value; store.save(); });
-$('#m-rec').addEventListener('click', function () { SFX.tap(); buildPlan(); show('plan'); });
-$('#m-free').addEventListener('click', function () { SFX.tap(); renderFree(); show('free'); });
 $('#brand').addEventListener('click', function () { if (screenName === 'talk' && S) { endSession(); return; } renderHome(); show('home'); });
-
-/* ---------- plan ---------- */
-function buildPlan() { PLAN = makePlan(); renderPlan(); }
-function renderPlan() {
-  var d = store.data, tl = $('#timeline'); tl.innerHTML = '';
-  var dn = d.dest ? REGIONS[d.dest].name : '';
-  var mins = 0; PLAN.items.forEach(function (it) { mins += it.min; });
-  $('#plan-title').textContent = (dn ? dn + '까지 ' : '') + '오늘의 추천 코스';
-  $('#plan-sub').textContent = REL_LABEL[d.rel] + ' ' + d.people + '명 · 남은 시간 약 ' + d.remain + '분 · 대화 ' + PLAN.items.filter(function (i) { return !i.quiet; }).length + '개' + (PLAN.quietCount ? ' · 조용한 시간 ' + PLAN.quietCount + '번 포함' : '') + ' (시간 제한은 없어요)';
-  var tags = phaseOfIndex(PLAN), lastTag = '';
-  PLAN.items.forEach(function (it, i) {
-    var tg = tags[i];
-    if (tg !== 'Q' && tg !== lastTag) { tl.appendChild(h('div', 'phase', PHASE_NAME[tg])); lastTag = tg; }
-    var row = h('div', 'item' + (it.quiet ? ' quiet' : ''));
-    if (it.quiet) {
-      row.style.borderLeftColor = 'var(--grape)';
-      row.appendChild(h('span', 'pill', '쉼'));
-      var mid = h('div'); mid.appendChild(h('div', 't', '조용한 시간')); mid.appendChild(h('div', 'e', '앱이 말을 걸지 않아요')); row.appendChild(mid);
-      row.appendChild(h('div', 'min', '약 ' + it.min + '분'));
-    } else {
-      var t = typeOf(it.type), g = groupOf(t.g);
-      row.style.borderLeftColor = g.tone;
-      row.appendChild(h('span', 'pill', g.name));
-      var m2 = h('div'); m2.appendChild(h('div', 't', t.name)); m2.appendChild(h('div', 'e', t.ex)); row.appendChild(m2);
-      var right = h('div', 'acts');
-      right.appendChild(h('span', 'min', '약 ' + it.min + '분'));
-      var sw = h('button', 'btn sm', '바꾸기'); sw.addEventListener('click', function () { swapItem(i); }); right.appendChild(sw);
-      var rm = h('button', 'btn sm ghost', '빼기'); rm.addEventListener('click', function () { PLAN.items.splice(i, 1); PLAN.phases[tags[i]]--; renderPlan(); }); right.appendChild(rm);
-      row.appendChild(right);
-    }
-    tl.appendChild(row);
-  });
-  if (!PLAN.items.length) tl.appendChild(h('p', 'sub', '추천할 문항이 없어요. 자유 모드를 이용해 주세요.'));
-}
-function swapItem(i) {
-  var it = PLAN.items[i], t = typeOf(it.type), used = PLAN.items.filter(function (x) { return x.q; }).map(function (x) { return x.q.id; });
-  var cands = shuffle(TYPES.filter(function (x) { return x.g === t.g && x.ready && x.id !== t.id && poolFor(x.id).length; }));
-  var nt = cands[0] || t, q = pickQuestion(nt.id, used);
-  if (q) { PLAN.items[i] = { type: nt.id, q: q, min: COST[nt.kind] || 3 }; renderPlan(); SFX.tap(); }
-}
-$('#plan-redo').addEventListener('click', function () { buildPlan(); SFX.tap(); });
-$('#plan-back').addEventListener('click', function () { renderHome(); show('home'); });
-$('#plan-start').addEventListener('click', function () { SFX.ok(); startPlan(); });
-function startPlan() {
-  if (!PLAN) buildPlan();
-  if (!PLAN.items.length) { toast('추천할 문항이 없어요'); return; }
-  startSession({ mode: 'REC', label: '추천 코스', steps: PLAN.items.slice() });
-}
 
 /* ---------- free mode (catalog) ---------- */
 var freeTab = 'CHOICE';
+/* 유형 아이콘: 이모지 대신 이미지 파일 경로(예: 'img/bal.png')를 넣으면 그림으로 표시된다 */
+var ICON = { BAL: '⚖️', BALP: '🔮', TASTE: '😋', DILEMMA: '🤔', COND: '📵', KEEP1: '☝️', DROP1: '🦟', RANK: '🏅',
+  NONSENSE: '🤪', TRIVIA: '🧠', OX: '⭕', MCQ: '📝', CHOSUNG: '🔤', DESC: '🕵️', HINT: '💡', COMMON: '🔗', ODD: '🧩', PRICE: '💰', NUMBER: '🔢',
+  SONG: '🎵', SFX: '🔔', ANIMAL: '🐶', LINE: '🎬', LYRIC: '🎤', INSTR: '🎻', FOREIGN: '🌏',
+  EXPYN: '🙋', MEMORY: '📷', BESTWORST: '🎢', FIRST: '🌱', HABIT: '🔍',
+  WHATIF: '✨', ISLAND: '🏝️', POWER: '🦸', BUDGET: '💸', SITUATION: '🚨',
+  DEBATE: '⚔️', STANDARD: '📏', VALUE: '🧭', JOINT: '🤝',
+  LIST: '📋', TABOO: '🚫', THREE: '3️⃣', PITCH: '📣', CHAIN: '⛓️', RECALL: '🧐' };
+function iconNode(t, g) {
+  var d = h('div', 'ico'); d.style.background = 'color-mix(in srgb, ' + g.tone + ' 35%, white)';
+  var v = ICON[t.id] || '🎲';
+  if (/[\/.]/.test(v) && /\.(png|jpe?g|svg|webp)$/i.test(v)) { var im = document.createElement('img'); im.src = v; im.alt = ''; d.appendChild(im); } else { d.textContent = v; d.setAttribute('aria-hidden', 'true'); }
+  return d;
+}
 function renderFree() {
   var tabs = $('#free-tabs'); tabs.innerHTML = '';
   GROUPS.forEach(function (g) {
     var b = h('button', 'chip', g.name + ' ' + TYPES.filter(function (t) { return t.g === g.id; }).length); b.setAttribute('aria-pressed', String(g.id === freeTab));
     b.addEventListener('click', function () { freeTab = g.id; renderFree(); SFX.tap(); }); tabs.appendChild(b);
   });
-  var grid = $('#free-grid'); grid.innerHTML = '';
+  var rail = $('#free-grid'); rail.innerHTML = ''; rail.scrollLeft = 0;
   var g = groupOf(freeTab);
-  var gd = h('p', 'sub', g.desc); gd.style.gridColumn = '1 / -1'; gd.style.margin = '0'; grid.appendChild(gd);
+  $('#free-desc').textContent = g.desc + ' · 옆으로 밀어서 넘겨 보세요 →';
   TYPES.filter(function (t) { return t.g === freeTab; }).forEach(function (t) {
     var ok = t.ready && poolFor(t.id).length > 0;
-    var c = h('button', 'tcard'); c.style.borderTopColor = g.tone; if (!ok) c.disabled = true;
-    c.appendChild(h('div', 't', t.name)); c.appendChild(h('div', 'e', t.ex));
-    if (!t.ready) c.appendChild(h('span', 'badge', '준비 중 · 음원 필요')); else if (!ok) c.appendChild(h('span', 'badge', '문항 준비 중'));
-    c.addEventListener('click', function () { SFX.tap(); startFree(t.id); });
-    grid.appendChild(c);
+    var c = h('button', 'tcard'); c.setAttribute('role', 'listitem'); c.style.borderColor = 'var(--line)'; if (!ok) c.disabled = true;
+    c.appendChild(iconNode(t, g)); c.appendChild(h('div', 't', t.name)); c.appendChild(h('div', 'e', t.ex));
+    c.appendChild(!t.ready ? h('span', 'badge', '준비 중 · 음원 필요') : !ok ? h('span', 'badge', '문항 준비 중') : h('span', 'badge', '시작'));
+    c.addEventListener('click', function () { if (dragMoved) return; SFX.tap(); startFree(t.id); });
+    rail.appendChild(c);
   });
 }
-$('#free-back').addEventListener('click', function () { renderHome(); show('home'); });
+/* 마우스로도 끌어서 넘기기 (터치는 기본 스크롤 사용) */
+var dragMoved = false;
+(function () {
+  var rail = $('#free-grid'), down = false, sx = 0, sl = 0;
+  rail.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse') return; down = true; dragMoved = false; sx = e.clientX; sl = rail.scrollLeft; });
+  window.addEventListener('pointermove', function (e) { if (!down) return; var dx = e.clientX - sx; if (Math.abs(dx) > 6) { dragMoved = true; rail.classList.add('drag'); } if (dragMoved) rail.scrollLeft = sl - dx; });
+  window.addEventListener('pointerup', function () { if (!down) return; down = false; rail.classList.remove('drag'); setTimeout(function () { dragMoved = false; }, 0); });
+})();
+$('#free-back').addEventListener('click', function () { SFX.tap(); renderHome(); show('home'); });
+$('#go-start').addEventListener('click', function () { SFX.ok(); openFree(); });
+function openFree() { renderFree(); show('free'); }
 $('#free-any').addEventListener('click', function () { startFree('ANY'); });
 function startFree(type) {
   startSession({ mode: 'FREE', type: type, label: type === 'ANY' ? '자유 · 아무거나' : '자유 · ' + typeOf(type).name, steps: null });
@@ -1126,8 +1075,7 @@ function endSession() {
 }
 var wrapEntry = null;
 $$('#rate .chip').forEach(function (b) { b.addEventListener('click', function () { if (!wrapEntry) return; wrapEntry.rating = +b.getAttribute('data-v'); store.save(); $$('#rate .chip').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); SFX.ok(); toast('의견 고마워요'); }); });
-$('#wrap-new').addEventListener('click', function () { renderHome(); buildPlan(); show('plan'); });
-$('#wrap-home').addEventListener('click', function () { renderHome(); show('home'); });
+$('#wrap-new').addEventListener('click', function () { openFree(); });
 
 /* ---------- vehicle state + settings ---------- */
 function setDrive(on) {
@@ -1140,7 +1088,6 @@ $('#st-park').addEventListener('click', function () { setDrive(false); });
 $('#st-drive').addEventListener('click', function () { setDrive(true); });
 function bindSwitch(id, key) { var b = $('#' + id); b.setAttribute('aria-pressed', String(!!store.data.settings[key])); b.addEventListener('click', function () { store.data.settings[key] = !store.data.settings[key]; b.setAttribute('aria-pressed', String(store.data.settings[key])); store.save(); if (key === 'voice' && !store.data.settings.voice) Mic.stop(); }); }
 bindSwitch('sw-tts', 'tts'); bindSwitch('sw-voice', 'voice'); bindSwitch('sw-sfx', 'sfx');
-var swq = $('#sw-quiet'); swq.setAttribute('aria-pressed', String(!!store.data.quiet)); swq.addEventListener('click', function () { store.data.quiet = !store.data.quiet; swq.setAttribute('aria-pressed', String(store.data.quiet)); store.save(); });
 $('#vol').value = store.data.settings.volume; $('#vol').addEventListener('input', function () { store.data.settings.volume = +this.value; store.save(); });
 $('#btn-set').addEventListener('click', function () { $('#ov-set').classList.add('show'); });
 $('#set-close').addEventListener('click', function () { $('#ov-set').classList.remove('show'); });
@@ -1150,9 +1097,10 @@ $('#log-clear').addEventListener('click', function () { store.data.log = []; sto
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape') $('#ov-set').classList.remove('show'); });
 
 /* ---------- test hooks ---------- */
-window.__cpg = { TYPES: TYPES, QUESTIONS: QUESTIONS, GROUPS: GROUPS, poolFor: poolFor, makePlan: makePlan, parseNum: parseNum, parseCommand: parseCommand, parseUtter: parseUtter, setDrive: setDrive, state: function () { return { S: S, screen: screenName, store: store.data }; } };
-$('#m-free p').textContent = TYPES.length + '가지 유형 중 원하는 놀이를 직접 골라요.';
+window.__cpg = { TYPES: TYPES, QUESTIONS: QUESTIONS, GROUPS: GROUPS, poolFor: poolFor, vehicle: Vehicle, parseNum: parseNum, parseCommand: parseCommand, parseUtter: parseUtter, setDrive: setDrive, state: function () { return { S: S, screen: screenName, store: store.data }; } };
+$('#free-sub').textContent = TYPES.length + '가지 유형 중 원하는 놀이를 골라요. 끝내고 싶을 때 “그만”이라고 말해요.';
 renderHome();
+Vehicle.start();
 })();
 </script>
 </body>

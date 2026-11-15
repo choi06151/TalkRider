@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F6FC">
+<title>여행 엽서 · CAR PLAYGROUND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* 휴대폰용 엽서 받기 페이지 — 차량 화면의 QR을 찍으면 열린다. Page 5 라이트 테마(IBM Plex Sans KR) 기준. */
+:root { --bg: #F3F6FC; --card: #FFFFFF; --ink: #0B1220; --sub: #5B6475; --blue: #2F7BFF; --line: rgba(11,18,32,.08); }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'IBM Plex Sans KR', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+main { max-width: 480px; margin: 0 auto; padding: max(28px, env(safe-area-inset-top)) 20px max(28px, env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 600 14px/1 'IBM Plex Sans KR', sans-serif; color: var(--sub); letter-spacing: .02em; }
+.brand i { width: 28px; height: 28px; border-radius: 50%; background: var(--blue); display: grid; place-items: center; color: #fff; font: 700 13px/1 sans-serif; font-style: normal; }
+h1 { margin: 0; font: 700 30px/1.25 'IBM Plex Sans KR', sans-serif; }
+.sub { margin: 4px 0 0; font: 400 16px/1.5 'IBM Plex Sans KR', sans-serif; color: var(--sub); }
+.tabs { display: flex; gap: 8px; }
+.tabs button { flex: 1; height: 48px; border: 0; border-radius: 999px; background: var(--card); color: var(--ink); font: 600 16px/1 'IBM Plex Sans KR', sans-serif; box-shadow: 0 1px 0 var(--line), 0 4px 16px rgba(11,18,32,.06); cursor: pointer; }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+.card { background: var(--card); border-radius: 24px; padding: 14px; box-shadow: 0 10px 30px rgba(11,18,32,.08); }
+.card img { display: block; width: 100%; height: auto; border-radius: 14px; }
+.save { height: 60px; border: 0; border-radius: 999px; background: var(--blue); color: #fff; font: 700 18px/1 'IBM Plex Sans KR', sans-serif; cursor: pointer; box-shadow: 0 10px 24px rgba(47,123,255,.3); }
+.save.ghost { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--line), 0 4px 16px rgba(11,18,32,.06); height: 52px; font-size: 16px; }
+.hint { margin: 0; text-align: center; font: 400 14px/1.6 'IBM Plex Sans KR', sans-serif; color: var(--sub); }
+#toast { position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); transform: translate(-50%, 20px); background: var(--ink); color: #fff; padding: 12px 20px; border-radius: 999px; font: 600 15px/1.2 sans-serif; opacity: 0; transition: .25s; pointer-events: none; white-space: nowrap; }
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><i>CP</i>CAR PLAYGROUND</div>
+  <div><h1>여행 엽서</h1><p class="sub" id="trip">강릉 여행 · 친구 셋의 두 시간</p></div>
+  <div class="tabs" role="group" aria-label="엽서 면"><button id="t-front" aria-pressed="true">앞면</button><button id="t-back" aria-pressed="false">뒷면</button></div>
+  <div class="card"><img id="card" src="postcards/gangneung-front.png" alt="강릉 여행 엽서 앞면"></div>
+  <button class="save" id="save">이미지 저장</button>
+  <button class="save ghost" id="save-all">앞면 · 뒷면 모두 저장</button>
+  <p class="hint">저장이 안 되면 엽서를 길게 눌러 ‘사진에 저장’을 선택하세요.</p>
+</main>
+<div id="toast" role="status"></div>
+<script>
+(function () {
+  var TRIPS = { gangneung: { name: '강릉 여행 · 친구 셋의 두 시간', front: 'postcards/gangneung-front.png', back: 'postcards/gangneung-back.png' } };
+  var q = new URLSearchParams(location.search), trip = TRIPS[q.get('trip')] || TRIPS.gangneung, side = q.get('side') === 'back' ? 'back' : 'front';
+  var img = document.getElementById('card'), toastEl = document.getElementById('toast'), th;
+  document.getElementById('trip').textContent = trip.name;
+  function toast(m) { toastEl.textContent = m; toastEl.classList.add('show'); clearTimeout(th); th = setTimeout(function () { toastEl.classList.remove('show'); }, 2200); }
+  function show(s) { side = s; img.src = trip[s]; img.alt = '강릉 여행 엽서 ' + (s === 'front' ? '앞면' : '뒷면'); document.getElementById('t-front').setAttribute('aria-pressed', String(s === 'front')); document.getElementById('t-back').setAttribute('aria-pressed', String(s === 'back')); }
+  document.getElementById('t-front').onclick = function () { show('front'); };
+  document.getElementById('t-back').onclick = function () { show('back'); };
+  /* 휴대폰: 공유 시트(사진에 저장) → 안 되면 파일로 내려받기 */
+  function fileOf(s) { return fetch(trip[s]).then(function (r) { return r.blob(); }).then(function (b) { return new File([b], 'carplayground-gangneung-' + s + '.png', { type: 'image/png' }); }); }
+  function download(file) { var a = document.createElement('a'); a.href = URL.createObjectURL(file); a.download = file.name; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000); }
+  function save(sides) {
+    Promise.all(sides.map(fileOf)).then(function (files) {
+      if (navigator.canShare && navigator.canShare({ files: files })) return navigator.share({ files: files, title: '여행 엽서' }).then(function () { toast('엽서를 저장했어요'); });
+      files.forEach(download); toast('엽서 이미지를 내려받았어요');
+    }).catch(function (e) { if (e && e.name === 'AbortError') return; toast('저장하지 못했어요 · 엽서를 길게 눌러 저장하세요'); });
+  }
+  document.getElementById('save').onclick = function () { save([side]); };
+  document.getElementById('save-all').onclick = function () { save(['front', 'back']); };
+  show(side);
+})();
+</script>
+</body>
+</html>

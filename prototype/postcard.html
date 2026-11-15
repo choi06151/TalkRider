@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#F3F6FC">
-<title>여행 엽서 · CAR PLAYGROUND</title>
+<title>여행 엽서 · 토크라이더</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
@@ -32,7 +32,7 @@ h1 { margin: 0; font: 700 30px/1.25 'IBM Plex Sans KR', sans-serif; }
 </head>
 <body>
 <main>
-  <div class="brand"><i>CP</i>CAR PLAYGROUND</div>
+  <div class="brand"><i>TR</i>토크라이더</div>
   <div><h1>여행 엽서</h1><p class="sub" id="trip">강릉 여행 · 친구 셋의 두 시간</p></div>
   <div class="tabs" role="group" aria-label="엽서 면"><button id="t-front" aria-pressed="true">앞면</button><button id="t-back" aria-pressed="false">뒷면</button></div>
   <div class="card"><img id="card" src="postcards/gangneung-front.png" alt="강릉 여행 엽서 앞면"></div>
@@ -52,7 +52,7 @@ h1 { margin: 0; font: 700 30px/1.25 'IBM Plex Sans KR', sans-serif; }
   document.getElementById('t-front').onclick = function () { show('front'); };
   document.getElementById('t-back').onclick = function () { show('back'); };
   /* 휴대폰: 공유 시트(사진에 저장) → 안 되면 파일로 내려받기 */
-  function fileOf(s) { return fetch(trip[s]).then(function (r) { return r.blob(); }).then(function (b) { return new File([b], 'carplayground-gangneung-' + s + '.png', { type: 'image/png' }); }); }
+  function fileOf(s) { return fetch(trip[s]).then(function (r) { return r.blob(); }).then(function (b) { return new File([b], 'talkrider-gangneung-' + s + '.png', { type: 'image/png' }); }); }
   function download(file) { var a = document.createElement('a'); a.href = URL.createObjectURL(file); a.download = file.name; document.body.appendChild(a); a.click(); setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000); }
   function save(sides) {
     Promise.all(sides.map(fileOf)).then(function (files) {

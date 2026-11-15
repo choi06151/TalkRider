@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* CAR PLAYGROUND 프로토타입 서버 — 같은 Wi-Fi의 휴대폰이 엽서 QR을 찍어 이미지를 받을 수 있게 한다.
+/* 토크라이더 프로토타입 서버 — 같은 Wi-Fi의 휴대폰이 엽서 QR을 찍어 이미지를 받을 수 있게 한다.
    실행:  node prototype/serve.js        (포트 바꾸기:  PORT=8080 node prototype/serve.js)
    PC 브라우저에서 터미널에 찍힌 주소로 열면, QR 화면의 QR이 그 주소(PC의 Wi-Fi IP)로 자동 생성된다. */
 'use strict';
@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, '0.0.0.0', () => {
   const ips = lanAddresses();
-  console.log('\nCAR PLAYGROUND 프로토타입 서버');
+  console.log('\n토크라이더 프로토타입 서버');
   console.log(`  이 PC:      http://localhost:${PORT}/`);
   ips.forEach(ip => console.log(`  같은 Wi-Fi: http://${ip}:${PORT}/`));
   if (!ips.length) console.log('  Wi-Fi 주소를 찾지 못했어요. 네트워크 연결을 확인하세요.');
